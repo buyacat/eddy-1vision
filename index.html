@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<title>Інтерактивні панелі 1-Vision — Eddy Group, Україна</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ============ SEO ============
+     TODO: коли буде фінальний домен — заміни https://1vision.eddygroup.eu/ у:
+     canonical, og:url, twitter:url, JSON-LD, sitemap.xml, robots.txt -->
+<meta name="description" content="Українські інтерактивні панелі 1-Vision — 65″/75″/86″, 4K UHD, 50 точок дотику, власне ПЗ і виробництво. Для шкіл і бізнесу. Демонстрація за запитом." />
+<meta name="keywords" content="інтерактивні панелі, інтерактивна панель, сенсорний дисплей, інтерактивна дошка, панель для школи, 1-Vision, Eddy Group, інтерактивна панель ціна, Нова українська школа" />
+<meta name="author" content="Eddy Group" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#F4F1EA" />
+<link rel="canonical" href="https://1vision.eddygroup.eu/" />
+<link rel="icon" type="image/svg+xml" href="assets/eddy-black.svg" />
+<link rel="apple-touch-icon" href="assets/eddy-black.svg" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Eddy Group" />
+<meta property="og:title" content="Інтерактивні панелі 1-Vision — Eddy Group" />
+<meta property="og:description" content="Українські інтерактивні панелі 1-Vision: 4K UHD, 50 точок дотику, власне ПЗ і виробництво. Для шкіл, бізнесу та публічних просторів." />
+<meta property="og:url" content="https://1vision.eddygroup.eu/" />
+<meta property="og:locale" content="uk_UA" />
+<!-- og:image навмисно НЕ додано (за проханням). Коли буде обкладинка 1200×630, додай:
+     <meta property="og:image" content="https://1vision.eddygroup.eu/assets/og-cover.jpg" />
+     <meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+     <meta property="og:image:alt" content="Інтерактивні панелі 1-Vision" /> -->
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Інтерактивні панелі 1-Vision — Eddy Group" />
+<meta name="twitter:description" content="Українські інтерактивні панелі: 4K UHD, 50 точок дотику, власне ПЗ і виробництво. Для шкіл, бізнесу та публічних просторів." />
+<!-- twitter:image додасться разом з og:image -->
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://eddygroup.eu/#organization",
+      "name": "Eddy Group",
+      "url": "https://eddygroup.eu",
+      "logo": "https://1vision.eddygroup.eu/assets/eddy-black.svg",
+      "email": "office@eddygroup.eu",
+      "telephone": "+380932708204",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Глибочицька, 32",
+        "addressLocality": "Київ",
+        "addressCountry": "UA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+380932708204",
+        "email": "office@eddygroup.eu",
+        "contactType": "sales",
+        "areaServed": "UA",
+        "availableLanguage": ["uk"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://1vision.eddygroup.eu/#website",
+      "url": "https://1vision.eddygroup.eu/",
+      "name": "Інтерактивні панелі 1-Vision",
+      "inLanguage": "uk",
+      "publisher": { "@id": "https://eddygroup.eu/#organization" }
+    },
+    {
+      "@type": "Product",
+      "name": "Інтерактивна панель 1-Vision",
+      "image": "https://1vision.eddygroup.eu/assets/eddy-black.svg",
+      "description": "Українська інтерактивна сенсорна панель 1-Vision: діагоналі 65″, 75″, 86″, 4K UHD, 50 точок дотику, Android 14, слот OPS, власне ПЗ. Виробництво на базі «Київприлад».",
+      "brand": { "@type": "Brand", "name": "1-Vision" },
+      "manufacturer": { "@id": "https://eddygroup.eu/#organization" },
+      "category": "Інтерактивні панелі",
+      "countryOfOrigin": "UA",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "UAH",
+        "price": "204012",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": { "@id": "https://eddygroup.eu/#organization" },
+        "description": "Комплект 1-Vision Pro Max 86″ + ПК + стійка (орієнтовна стартова вартість)"
+      }
+    }
+  ]
+}
+</script>
+<!-- ============ /SEO ============ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Sora:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="1vision.css">
+</head>
+<body>
+
+<!-- tweak defaults (host rewrites this block) -->
+<script>
+window.TWEAKS = /*EDITMODE-BEGIN*/{
+  "palette": "graphite",
+  "showPrices": true
+}/*EDITMODE-END*/;
+</script>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav" aria-label="Головна навігація">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img class="logo" src="assets/eddy-black.svg" alt="Eddy Group" />
+      <span class="vline"></span>
+      <span>
+        <span class="pname"><span class="one">1</span>Vision</span>
+        <div class="ptag">Інтерактивні панелі</div>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#models">Моделі</a>
+      <a href="https://eddytrade.com.ua" target="_blank" rel="noreferrer">Eddy Trade</a>
+      <a href="#news">Новини</a>
+      <a href="#contact">Контакти</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="#contact">Залишити заявку</a>
+      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- mobile drawer -->
+<div class="drawer" id="drawer">
+  <div class="scrim" data-close></div>
+  <div class="sheet">
+    <a href="#models" data-close>Моделі</a>
+    <a href="https://eddytrade.com.ua" target="_blank" rel="noreferrer" data-close>Eddy Trade</a>
+    <a href="#news" data-close>Новини</a>
+    <a href="#contact" data-close>Контакти</a>
+    <a class="btn btn-primary" href="#contact" data-close>Замовити демонстрацію</a>
+  </div>
+</div>
+
+<!-- instrument faceplate: corner registration crosshairs -->
+<div class="faceplate" aria-hidden="true">
+  <span class="cx tl"></span><span class="cx tr"></span><span class="cx bl"></span><span class="cx br"></span>
+</div>
+
+<main id="main">
+
+<!-- ============ BLOCK 1 · HERO ============ -->
+<section class="hero" id="top" data-hero="a" data-screen-label="Hero">
+
+  <!-- VARIANT A · 1-Vision — зразок під інспекцією (КАЛІБР, 1 екран) -->
+  <div class="hero-variant hv-a">
+    <div class="hero-bg"></div>
+    <div class="gridlines"></div>
+    <div class="wrap">
+      <div class="sheet-frame">
+        <span class="sx tl"></span><span class="sx tr"></span>
+        <span class="sx bl"></span><span class="sx br"></span>
+
+        <div class="hero-grid">
+          <!-- ЛІВОРУЧ: копі -->
+          <div class="hero-copy">
+            <div class="badge-ua"><span class="flag"></span> Зроблено в Україні · Eddy Group</div>
+            <h1>Інтерактивні панелі <span class="hl">1-Vision</span></h1>
+            <p class="lede">Українські інтерактивні панелі для шкіл, бізнесу та публічних просторів. Власне ПЗ, виробництво й підтримка — в Україні.</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#contact">Замовити демонстрацію</a>
+              <a class="btn btn-ghost" href="#contact">Консультація менеджера</a>
+            </div>
+          </div>
+
+          <!-- ПРАВОРУЧ: фото-зразок, ВКРИТЕ кресленням (засічки/розміри/виноски) -->
+          <figure class="specimen">
+            <span class="sp-label mono">КРЕСЛЕННЯ · НАОЧНИЙ ВИД 3/4 · ЗРАЗОК 1V-0001</span>
+            <div class="sp-stage">
+              <div class="sp-frame">
+                <img src="assets/1vision-3q.png" alt="Інтерактивна панель 1-Vision — наочний вид 3/4" decoding="async" />
+                <div class="sp-draft" aria-hidden="true">
+                  <span class="ruler r-top"></span>
+                  <span class="ruler r-bottom"></span>
+                  <span class="ruler r-left"></span>
+                  <span class="ddim ddim-w"><b class="mono">86″ · 2184 mm</b></span>
+                  <span class="ddim ddim-h"><b class="mono">1100</b></span>
+                  <span class="diag"><b class="mono">Ø 86″</b></span>
+                  <span class="reticle"></span>
+                  <span class="cap cap-1"><i></i><b class="mono">ІЧ · 50 точок</b></span>
+                  <span class="cap cap-2"><i></i><b class="mono">4K UHD · IPS</b></span>
+                  <span class="cap cap-3"><i></i><b class="mono">OPS · i5</b></span>
+                  <span class="cap cap-4"><i></i><b class="mono">2.0 · 40 Вт</b></span>
+                </div>
+                <span class="sp-qc mono">QC&nbsp;✓&nbsp;12:39</span>
+                <div class="inst-corners"><span></span><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="sp-plate mono buildplate etched">
+              <span class="brand">1-VISION</span>
+              <span>сер.№&nbsp;1V-0001</span>
+              <span>ВТК&nbsp;·&nbsp;UA</span>
+              <span class="pass"><i class="led"></i>PASS</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============ BLOCK 2 · STATS + PARTNERS ============ -->
+<section class="sec stats grid-zone" id="stats" data-screen-label="Статистика">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Цифри, якими пишаємось</span>
+      <h2>Масштаб, який <span class="hl">видно на ринку</span></h2>
+    </div>
+
+    <div class="stat-grid reveal stagger" style="margin-top:46px">
+      <div class="stat"><div class="n"><span data-count="3400">0</span><span class="suf">+</span></div><div class="l">встановлених інтерактивних панелей у 2025</div></div>
+      <div class="stat"><div class="n"><span data-count="2000">0</span><span class="suf">+</span></div><div class="l">шкіл по Україні — від великих міст до сіл</div></div>
+      <div class="stat"><div class="n"><span data-count="300000">0</span><span class="suf">+</span></div><div class="l">учнів системно взаємодіють із панелями</div></div>
+      <div class="stat"><div class="n"><span data-count="44.5" data-dec="1">0</span><span class="suf"> млн ₴</span></div><div class="l">економії бюджету за 2025 рік</div></div>
+    </div>
+
+    <div class="monument reveal">
+      <div class="mono-figure">
+        <div class="cells"><span class="cell"></span><span class="cell"></span></div>
+        <div class="big"><span class="lit">1</span><span class="of3"> /3</span></div>
+      </div>
+      <div class="mono-copy">
+        <h3>панелей в Україні — 1-Vision</h3>
+        <p>Кожна третя інтерактивна панель у країні — наша. Результат загальнонаціональної довіри та масштабного впровадження: працюємо в усіх вільних регіонах України, визнані лідером ринку 2025 на прозорій державній платформі.</p>
+        <span class="prozorro"><span class="vd"></span>Лідер ринку · Prozorro Market 2025</span>
+      </div>
+      <span class="cell on cell-accent" aria-hidden="true"></span>
+    </div>
+
+    <div class="partners reveal">
+      <div class="lbl tick">Працюємо та сумісні з рішеннями</div>
+      <div class="partner-row">
+        <span class="partner"><img src="assets/partners/lenovo.svg" alt="Lenovo" loading="lazy" /></span>
+        <span class="partner emblem"><img src="assets/partners/unesco.svg" alt="UNESCO" loading="lazy" /></span>
+        <span class="partner"><img src="assets/partners/benq.svg" alt="BenQ" loading="lazy" /></span>
+        <span class="partner"><img src="assets/partners/iiyama.svg" alt="iiyama" loading="lazy" /></span>
+        <span class="partner"><img src="assets/partners/google.svg" alt="Google" loading="lazy" /></span>
+        <span class="partner"><img src="assets/partners/starboard.webp" alt="StarBoard" loading="lazy" /></span>
+        <span class="partner"><img src="assets/partners/microsoft.svg" alt="Microsoft" loading="lazy" /></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 3 · TECH FEATURES ============ -->
+<section class="sec features grid-zone" id="features" data-screen-label="Технології">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Технологічні переваги</span>
+      <h2>Все необхідне — <span class="hl">всередині панелі</span></h2>
+      <p>Професійна матриця, точний сенсор, захисне скло та продуктивна платформа Android з можливістю встановити повноцінний ПК.</p>
+    </div>
+
+    <div class="feat-grid reveal stagger">
+      <div class="feat"><div class="idx">01</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h4>4K UHD дисплей</h4><div class="spec">IPS · 3840×2160 · 400 кд/м²</div><p>IPS-матриця з кутами огляду 178° — чітке та яскраве зображення з будь-якої точки кабінету.</p></div>
+      <div class="feat"><div class="idx">02</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V6a2 2 0 0 1 4 0v5"/><path d="M13 11V4a2 2 0 0 1 4 0v9"/><path d="M17 9a2 2 0 0 1 4 0v4a8 8 0 0 1-8 8h-2a8 8 0 0 1-7-4l-2.5-4a2 2 0 0 1 3.4-2L9 14"/></svg></div><h4>50 точок дотику</h4><div class="spec">ІЧ-сенсор · відгук ≤ 5 мс</div><p>Кілька користувачів працюють з екраном одночасно — швидко й точно.</p></div>
+      <div class="feat"><div class="idx">03</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Захисне скло</h4><div class="spec">Zero bonding · антиблік</div><p>Загартоване антиблікове скло та фільтр блакитного світла — безпечно для очей.</p></div>
+      <div class="feat"><div class="idx">04</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h4>Ресурс 50 000 годин</h4><div class="spec">роки щоденної роботи</div><p>Матриця розрахована на багаторічну щоденну експлуатацію в інтенсивному режимі.</p></div>
+      <div class="feat"><div class="idx">05</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></div><h4>Продуктивна платформа</h4><div class="spec">Android 14 · до 16 / 256 ГБ</div><p>Конфігурації 8 / 128 ГБ та Pro Max 16 / 256 ГБ для плавної роботи без затримок.</p></div>
+      <div class="feat"><div class="idx">06</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h.01M7 13h6"/></svg></div><h4>Слот OPS</h4><div class="spec">i5 12Gen · 16 ГБ · 512 ГБ</div><p>Вбудований комп'ютерний модуль — повноцінний ПК всередині панелі.</p></div>
+      <div class="feat"><div class="idx">07</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.8a15 15 0 0 1 20 0"/><circle cx="12" cy="20" r="1"/></svg></div><h4>Бездротові підключення</h4><div class="spec">Wi-Fi · Bluetooth · трансляція</div><p>Транслюйте контент з будь-якого пристрою — без кабелів і перемикань.</p></div>
+      <div class="feat"><div class="idx">08</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/></svg></div><h4>Вбудована акустика</h4><div class="spec">стерео 2.0 · 40 Вт</div><p>Потужна стереосистема — звук чути в кожному куточку аудиторії.</p></div>
+    </div>
+
+    <div class="compliance reveal">
+      <div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <span><b>Відповідає вимогам</b> програми «Нова українська школа» та Ukraine Facility.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 4 · MADE IN UKRAINE ============ -->
+<section class="sec made grid-zone" id="made" data-screen-label="Виробництво">
+  <div class="ua-stripe"></div>
+  <div class="wrap">
+    <div class="made-grid">
+      <div class="made-copy reveal">
+        <span class="eyebrow light">Made in Ukraine</span>
+        <h2>Виробляємо в Україні —<br>без посередників</h2>
+        <p class="lede">Панелі 1-Vision виробляються на базі підприємства аерокосмічного приладобудування «Київприлад». Консультують фахівці з виробництва напряму.</p>
+        <div class="made-points">
+          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l5-3v16M14 21V5l5 3v13"/><path d="M9 9h.01M9 13h.01M9 17h.01"/></svg></div><div><h4>Власне виробництво</h4><p>На базі підприємства аерокосмічного приладобудування «Київприлад».</p></div></div>
+          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></div><div><h4>10 000 м² майданчику</h4><p>Виробничий простір із сучасним обладнанням.</p></div></div>
+          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2 2.6-2.6z"/></svg></div><div><h4>Гарантія та підтримка від виробника</h4><p>Технічна підтримка та віддалене налаштування напряму.</p></div></div>
+          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 9h4l3 3v3a2 2 0 0 1-2 2h-1"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><div><h4>Доставка та встановлення</h4><p>У будь-яку точку України — заносимо, монтуємо й налаштовуємо на місці.</p></div></div>
+          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 0 1-4 0v-.1A1.6 1.6 0 0 0 7 19.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 3 12.9H3a2 2 0 0 1 0-4h.1A1.6 1.6 0 0 0 4.6 6"/></svg></div><div><h4>Сервісне обслуговування</h4><p>На заводі виробника; за потреби майстер виїжджає до замовника.</p></div></div>
+          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10M18 21V10M4 10l8-6 8 6M9 21v-5h6v5"/></svg></div><div><h4>Готовність до держзакупівель</h4><p>Представлені у каталозі Prozorro Market, повний пакет документів для тендерів.</p></div></div>
+        </div>
+      </div>
+      <div class="made-vis reveal">
+        <div class="made-photo">
+          <div style="aspect-ratio:4/5;position:relative;background:radial-gradient(120% 100% at 60% 20%,#1B2129,#0C0E12);">
+            <div class="ph-stripe" style="background-image:repeating-linear-gradient(135deg,rgba(150,180,220,.07) 0 14px,transparent 14px 28px)"></div>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#8A929D;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;">
+              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#5C6470" stroke-width="1.6" style="margin:0 auto 12px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+              ФОТО З ВИРОБНИЦТВА<br><span style="opacity:.6">складання панелей · чиста зона</span>
+            </div>
+          </div>
+        </div>
+        <div class="made-badge"><span class="flag"></span><div><b>Made in Ukraine</b><span>Виробництво «Київприлад»</span></div></div>
+        <div class="made-mini">
+          <div class="m"><div class="v">10 000 м²</div><div class="k">виробничий майданчик</div></div>
+          <div class="m"><div class="v">0</div><div class="k">посередників</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 5 · SOFTWARE ============ -->
+<section class="sec software grid-zone" id="software" data-screen-label="Софт">
+  <div class="wrap">
+    <div class="sw-grid">
+      <div class="sw-copy reveal">
+        <span class="eyebrow">Власне ПЗ для шкіл</span>
+        <h2>Власний софт для <span class="hl">українських шкіл</span></h2>
+        <p>Розроблено в Україні спеціально під освітній процес та вимоги «Нової української школи». Українська локалізація, безкоштовні оновлення та підтримка.</p>
+        <div class="sw-caps">
+          <div class="sw-cap"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><p><b>Інтерактивна дошка:</b> малювання, нотатки, фігури, одночасна робота кількох учнів.</p></div>
+          <div class="sw-cap"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><p><b>Анотації</b> поверх будь-якого контенту — презентацій, відео, сайтів.</p></div>
+          <div class="sw-cap"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><p><b>Бездротова трансляція</b> екрана з пристроїв вчителя та учнів.</p></div>
+          <div class="sw-cap"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><p><b>Бібліотека</b> готових навчальних матеріалів.</p></div>
+          <div class="sw-cap"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><p><b>Інтеграція з обладнанням Eddy Group:</b> дані цифрових лабораторій і метеостанції — прямо на панель.</p></div>
+        </div>
+      </div>
+      <div class="sw-mock reveal">
+        <div class="mock">
+          <div class="topbar"><span class="d" style="background:#FF5F57"></span><span class="d" style="background:#FEBC2E"></span><span class="d" style="background:#28C840"></span><span class="t">1-vision · whiteboard</span></div>
+          <div class="board">
+            <div class="ph-stripe"></div>
+            <div class="toolrail"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+            <svg class="draw" viewBox="0 0 600 380" fill="none" preserveAspectRatio="none">
+              <path d="M120 250 C180 120 260 300 340 160 S480 120 540 220" stroke="#C0822E" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="340" cy="160" r="8" fill="#5E7A55"/>
+              <path d="M150 300 h180" stroke="#9C6620" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <div class="note" style="top:30px;left:90px;">Урок · Геометрія</div>
+            <div class="ph-label">SCREENSHOT · ПЗ 1-Vision</div>
+          </div>
+        </div>
+        <div class="sw-float" style="top:-18px;right:-14px;"><div class="k">ТРАНСЛЯЦІЯ</div><div class="v">Wi-Fi · 3 пристрої</div></div>
+        <div class="sw-float" style="bottom:-16px;left:-16px;"><div class="k">ЛОКАЛІЗАЦІЯ</div><div class="v">🇺🇦 Українська</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 6 · USE CASES ============ -->
+<section class="sec cases grid-zone" id="cases" data-screen-label="Застосування">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Сфери застосування</span>
+      <h2>Одна панель — <span class="hl">різні сценарії</span></h2>
+      <p>Освіта, бізнес і публічні простори: підбираємо діагональ, ПЗ та комплектацію під ваш процес.</p>
+    </div>
+
+    <div class="case-tabs reveal" id="caseTabs">
+      <button class="case-tab active" data-case="0"><span class="num">01</span>Презентація та навчання</button>
+      <button class="case-tab" data-case="1"><span class="num">02</span>Навігація та самообслуговування</button>
+      <button class="case-tab" data-case="2"><span class="num">03</span>Замовлення та вибір</button>
+      <button class="case-tab" data-case="3"><span class="num">04</span>Робота та координація</button>
+    </div>
+
+    <div class="case-wrap reveal">
+      <!-- 1 -->
+      <div class="case-panel active">
+        <div class="case-card">
+          <div class="case-body">
+            <div class="where"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Школи · курси · конференц-зали · корпоративне навчання</div>
+            <h3>Презентація та навчання</h3>
+            <p class="how">Спікер не просто показує слайди — він малює прямо на екрані, виводить контент з будь-якого пристрою, запускає інтерактивні завдання. Аудиторія бере участь: виходить до екрану, відповідає, працює з матеріалом руками.</p>
+            <div class="case-adv">
+              <div class="adv"><div class="stat-n">76%</div><p>освітян кажуть, що учні більш залучені при використанні інтерактивного дисплея (71% — що увага тримається довше).</p></div>
+              <div class="adv"><div class="stat-n">85%</div><p>зростання залученості у класах з інтерактивними екранами — за даними EdSurge.</p></div>
+              <div class="adv"><div class="stat-n">50</div><p>точок дотику дозволяють кільком учням працювати з екраном одночасно — це розвиває командну взаємодію.</p></div>
+            </div>
+          </div>
+          <div class="case-vis"><div class="ph-stripe"></div><svg class="big-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="ph-tag">ФОТО · урок біля панелі</span></div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="case-panel">
+        <div class="case-card">
+          <div class="case-body">
+            <div class="where"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 22V12h6v10M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Бізнес-центри · готелі · лікарні · музеї · аеропорти</div>
+            <h3>Навігація та самообслуговування</h3>
+            <p class="how">Людина сама знаходить те, що їй потрібно — кабінет, розклад, реєстрацію, карту будівлі — у режимі самообслуговування. Панель бере на себе типові запити, а персонал розвантажується для важливіших завдань.</p>
+            <div class="case-adv">
+              <div class="adv"><div class="stat-n">−черги</div><p>пошук, карта та реєстрація — без черги й без участі співробітника у пікові години.</p></div>
+              <div class="adv"><div class="stat-n">24/7</div><p>панель працює в режимі інтерактивної навігації постійно — зручно відвідувачам.</p></div>
+              <div class="adv"><div class="stat-n">+час</div><p>персонал вивільняється від рутини й переходить до якіснішої взаємодії з відвідувачами.</p></div>
+            </div>
+          </div>
+          <div class="case-vis"><div class="ph-stripe"></div><svg class="big-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 22V12h6v10M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span class="ph-tag">ФОТО · панель у холі</span></div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="case-panel">
+        <div class="case-card">
+          <div class="case-body">
+            <div class="where"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Кафе · ресторани · фастфуд · рітейл · шоуруми</div>
+            <h3>Замовлення та вибір</h3>
+            <p class="how">Клієнт сам гортає меню чи каталог на панелі, обирає, додає опції й оплачує у своєму темпі. Екран ненав'язливо пропонує доповнення — і середній чек росте без тиску на клієнта.</p>
+            <div class="case-adv">
+              <div class="adv"><div class="stat-n">+20%</div><p>середнє зростання вартості замовлення при самостійному виборі на сенсорному екрані (Tillster).</p></div>
+              <div class="adv"><div class="stat-n">61%</div><p>клієнтів витрачають більше, коли замовляють самостійно через екран, ніж на касі.</p></div>
+              <div class="adv"><div class="stat-n">UX</div><p>інтерактивний вибір на великому екрані відповідає звичкам молодшої аудиторії.</p></div>
+            </div>
+          </div>
+          <div class="case-vis"><div class="ph-stripe"></div><svg class="big-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span class="ph-tag">ФОТО · кіоск самообслуговування</span></div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="case-panel">
+        <div class="case-card">
+          <div class="case-body">
+            <div class="where"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Переговорки · штаби · диспетчерські · проєктні офіси</div>
+            <h3>Робота та координація</h3>
+            <p class="how">Кілька людей працюють з одними даними в реальному часі — планують, малюють схеми, виводять контент з ноутбуків, ухвалюють рішення. Усі бачать одну картину, ніхто не перемикається між пристроями.</p>
+            <div class="case-adv">
+              <div class="adv"><div class="stat-n">−18%</div><p>економія бюджету, який зазвичай втрачається на інтеграційні «костилі» між інструментами.</p></div>
+              <div class="adv"><div class="stat-n">1 екран</div><p>замість розрізнених гаджетів — прискорює ухвалення рішень.</p></div>
+              <div class="adv"><div class="stat-n">∞</div><p>мультитач і бездротова трансляція з будь-якого пристрою — команда працює спільно, а не по черзі.</p></div>
+            </div>
+          </div>
+          <div class="case-vis"><div class="ph-stripe"></div><svg class="big-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M7 21h10M12 17v4"/></svg><span class="ph-tag">ФОТО · переговорна кімната</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-cta reveal">
+      <div>
+        <h3>Не знайшли свій сценарій?</h3>
+        <p>Розкажіть про задачу — підберемо діагональ, ПЗ і комплектуючі під ваш процес.</p>
+      </div>
+      <a class="btn btn-primary" href="#contact">Обговорити мій сценарій</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 7 · MODELS + ACCESSORIES ============ -->
+<section class="sec models grid-zone" id="models" data-screen-label="Моделі">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Моделі та комплектуючі</span>
+      <h2>Оберіть <span class="hl">конфігурацію</span></h2>
+      <p>Три конфігурації панелі та діагоналі 65", 75", 86". Доповнюйте стійками, кріпленнями та OPS-модулем.</p>
+    </div>
+
+    <div class="model-grid reveal stagger">
+      <div class="model">
+        <div class="vis"><div class="ph-stripe"></div><span class="tag">65" / 75" / 86"</span><div class="panel-ic"></div></div>
+        <div class="body">
+          <h3>1-Vision</h3>
+          <div class="sub">Базова конфігурація · Україна</div>
+          <div class="specs">
+            <div class="r"><span class="k">Оперативна пам'ять</span><span class="v">8 ГБ</span></div>
+            <div class="r"><span class="k">Накопичувач</span><span class="v">128 ГБ</span></div>
+            <div class="r"><span class="k">ОС</span><span class="v">Android 14</span></div>
+          </div>
+          <div class="price"><div><div class="from" data-price>Ціна за запитом</div><div class="amt" data-price-amt style="display:none"></div></div><a class="btn btn-ghost btn-sm" href="#contact">Замовити</a></div>
+        </div>
+      </div>
+      <div class="model">
+        <div class="vis"><div class="ph-stripe"></div><span class="tag">65" / 75" / 86"</span><div class="panel-ic"></div></div>
+        <div class="body">
+          <h3>1-Vision Pro</h3>
+          <div class="sub">Розширена конфігурація · Україна</div>
+          <div class="specs">
+            <div class="r"><span class="k">Оперативна пам'ять</span><span class="v">8 ГБ</span></div>
+            <div class="r"><span class="k">Накопичувач</span><span class="v">128 ГБ</span></div>
+            <div class="r"><span class="k">ОС</span><span class="v">Android 14</span></div>
+          </div>
+          <div class="price"><div><div class="from" data-price>Ціна за запитом</div><div class="amt" data-price-amt style="display:none"></div></div><a class="btn btn-ghost btn-sm" href="#contact">Замовити</a></div>
+        </div>
+      </div>
+      <div class="model flagship">
+        <div class="vis"><div class="ph-stripe"></div><span class="tag">65" / 75" / 86"</span><span class="flagtag">Flagship</span><div class="panel-ic"></div></div>
+        <div class="body">
+          <h3>1-Vision Pro Max</h3>
+          <div class="sub">Максимальна продуктивність · Україна</div>
+          <div class="specs">
+            <div class="r"><span class="k">Оперативна пам'ять</span><span class="v">16 ГБ</span></div>
+            <div class="r"><span class="k">Накопичувач</span><span class="v">256 ГБ</span></div>
+            <div class="r"><span class="k">ОС</span><span class="v">Android 14</span></div>
+          </div>
+          <div class="price"><div><div class="from" data-price>Комплект 86" + ПК + стійка, від</div><div class="amt" data-price-amt>204&nbsp;012 <span class="cur">₴</span></div></div><a class="btn btn-primary btn-sm" href="#contact">Замовити</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="price-note reveal">* Орієнтовна вартість комплекту з каталогу. Фінальна ціна залежить від діагоналі та комплектації — уточнюйте у менеджера.</div>
+
+    <div class="acc-head sec-head reveal">
+      <span class="eyebrow">Комплектуючі та аксесуари</span>
+      <h2 style="font-size:clamp(24px,2.6vw,32px)">Доповніть під свій кабінет</h2>
+    </div>
+    <div class="acc-grid reveal stagger">
+      <div class="acc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="9" rx="1"/><path d="M12 12v7M7 22h10M9 22a3 3 0 0 1 6 0"/></svg></div><h4>Мобільна стійка</h4><p>Переміщуйте панель між кабінетами та залами. Регулювання висоти, полиця для аксесуарів.</p><div class="meta">VESA до 800×400 · до 90 кг</div></div>
+      <div class="acc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M12 17v4M8 21h8"/></svg></div><h4>Настінне кріплення</h4><p>Надійний монтаж у класі чи переговорній — швидко та безпечно.</p><div class="meta">сумісність VESA</div></div>
+      <div class="acc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h4M6 14h8"/></svg></div><h4>OPS-модуль</h4><p>Вбудований ПК всередині панелі — повноцінна робоча станція.</p><div class="meta">від 57&nbsp;060 ₴ · i5 12Gen</div></div>
+      <div class="acc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div><h4>Стилуси та аксесуари</h4><p>Додаткові стилуси, кабелі, пульти — перелік постійно розширюється.</p><div class="meta">за запитом</div></div>
+    </div>
+    <div class="acc-note reveal">Перелік комплектуючих постійно розширюється — щоб отримати актуальний, лишіть заявку або зв'яжіться з нами.</div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 8 · CONTACT + FORM ============ -->
+<section class="sec contact grid-zone" id="contact" data-screen-label="Контакти">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-copy reveal">
+        <span class="eyebrow">Готові до співпраці</span>
+        <h2>Залиште заявку на 1-Vision</h2>
+        <p class="lede">Наш менеджер допоможе підібрати діагональ, комплектацію та аксесуари під ваші задачі, проведе демонстрацію або підготує комерційну пропозицію для тендеру.</p>
+        <div class="contact-cards">
+          <div class="cc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="k">Телефон</div><a class="v" href="tel:+380932708204">+380 93 270 82 04</a></div></div>
+          <div class="cc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div><div><div class="k">Email</div><a class="v" href="mailto:office@eddygroup.eu">office@eddygroup.eu</a></div></div>
+          <div class="cc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-7.6 8-13a8 8 0 1 0-16 0c0 5.4 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg></div><div><div class="k">Адреса</div><div class="v">Київ, вул. Глибочицька, 32</div></div></div>
+          <div class="cc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg></div><div><div class="k">Сайт</div><a class="v" href="https://eddygroup.eu" target="_blank" rel="noreferrer">eddygroup.eu</a></div></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <form id="leadForm">
+          <!-- Web3Forms: встав свій access key у value нижче.
+               Отримати за 30 сек: web3forms.com → введи email (краще office@eddygroup.eu) → ключ прийде на пошту. -->
+          <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="Нова заявка з сайту 1-Vision">
+          <input type="hidden" name="from_name" value="1-Vision Landing">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          <h3>Заявка на 1-Vision</h3>
+          <div class="sub">Підберемо діагональ, комплектацію та проведемо демонстрацію.</div>
+          <div class="field"><label>Ім'я та прізвище <span class="req">*</span></label><input type="text" name="name" required placeholder="Іван Петренко" /></div>
+          <div class="field"><label>Назва закладу / компанії</label><input type="text" name="org" placeholder="Школа №— / ТОВ —" /></div>
+          <div class="field row">
+            <div><label>Телефон <span class="req">*</span></label><input type="tel" name="phone" required placeholder="+380 —" /></div>
+            <div><label>Email</label><input type="email" name="email" placeholder="you@mail.com" /></div>
+          </div>
+          <div class="field"><label>Коментар</label><textarea name="comment" placeholder="Напр. «Цікавить 1-Vision 75 зі стійкою»"></textarea></div>
+          <button class="btn btn-primary" type="submit">Надіслати заявку на 1-Vision</button>
+          <div class="form-err" id="formErr" style="display:none">Не вдалося надіслати. Спробуйте ще раз або зателефонуйте <a href="tel:+380932708204">+380 93 270 82 04</a>.</div>
+          <div class="form-foot"><span class="dot"></span> Відповідаємо протягом одного робочого дня</div>
+        </form>
+        <div class="form-ok" id="formOk">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>Дякуємо!</h3>
+          <p>Заявку отримано. Менеджер зв'яжеться з вами протягом робочого дня.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="f-brand">
+        <img class="logo" src="assets/eddy-white.svg" alt="Eddy Group" />
+        <p>Інтерактивні панелі 1-Vision. Власне програмне забезпечення, виробництво, сервіс і підтримка в Україні.</p>
+        <div class="f-badges">
+          <img src="assets/made-in-ua.png" alt="Зроблено в Україні" loading="lazy" decoding="async" width="120" height="34" />
+          <img src="assets/eu-funded.png" alt="Funded by the EU · Ukraine Facility" loading="lazy" decoding="async" width="120" height="34" />
+        </div>
+      </div>
+      <div class="fcol">
+        <h4>Продукт</h4>
+        <a href="#features">Технології</a>
+        <a href="#software">Софт для шкіл</a>
+        <a href="#models">Моделі та ціни</a>
+        <a href="#cases">Застосування</a>
+      </div>
+      <div class="fcol">
+        <h4>Компанія</h4>
+        <a href="#made">Виробництво</a>
+        <a href="https://eddygroup.eu" target="_blank" rel="noreferrer">eddygroup.eu</a>
+        <a href="#contact">Контакти</a>
+        <p>Prozorro Market</p>
+      </div>
+      <div class="fcol">
+        <h4>Контакти</h4>
+        <a href="tel:+380932708204">+380 93 270 82 04</a>
+        <a href="mailto:office@eddygroup.eu">office@eddygroup.eu</a>
+        <p>Київ, вул. Глибочицька, 32</p>
+      </div>
+    </div>
+    <div class="buildplate etched f-plate">1-VISION · UA · СЕР. №1V-____ · ──┤ 65″ / 75″ / 86″ ├──</div>
+    <div class="footer-bottom">
+      <div class="cp">© 2026 Eddy Group · Інтерактивні панелі 1-Vision</div>
+      <div class="made-tag"><span class="flag"></span> Зроблено в Україні</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- vanilla tweaks panel -->
+<div id="twkRoot"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

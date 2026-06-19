@@ -1,0 +1,6 @@
+# robots.txt — 1-Vision (Eddy Group)
+User-agent: *
+Allow: /
+
+# TODO: заміни домен на фінальний
+Sitemap: https://1vision.eddygroup.eu/sitemap.xml
