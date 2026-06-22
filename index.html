@@ -97,7 +97,7 @@
 <!-- ============ /SEO ============ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Sora:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="1vision.css">
 </head>
 <body>
@@ -153,69 +153,82 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
 
 <main id="main">
 
-<!-- ============ BLOCK 1 · HERO ============ -->
-<section class="hero" id="top" data-hero="a" data-screen-label="Hero">
+<!-- ============ BLOCK 1 · HERO B1 · темний КАЛІБР фулскрін ============ -->
+<section class="hero hero-b1" id="top" data-hero="b1" data-screen-label="Hero">
 
-  <!-- VARIANT A · 1-Vision — зразок під інспекцією (КАЛІБР, 1 екран) -->
-  <div class="hero-variant hv-a">
-    <div class="hero-bg"></div>
-    <div class="gridlines"></div>
-    <div class="wrap">
-      <div class="sheet-frame">
-        <span class="sx tl"></span><span class="sx tr"></span>
-        <span class="sx bl"></span><span class="sx br"></span>
+  <div class="b1-bg"><div class="bgmove"></div></div>
+  <div class="b1-vig"></div>
 
-        <div class="hero-grid">
-          <!-- ЛІВОРУЧ: копі -->
-          <div class="hero-copy">
-            <div class="badge-ua"><span class="flag"></span> Зроблено в Україні · Eddy Group</div>
-            <h1>Інтерактивні панелі <span class="hl">1-Vision</span></h1>
-            <p class="lede">Українські інтерактивні панелі для шкіл, бізнесу та публічних просторів. Власне ПЗ, виробництво й підтримка — в Україні.</p>
-            <div class="hero-cta">
-              <a class="btn btn-primary" href="#contact">Замовити демонстрацію</a>
-              <a class="btn btn-ghost" href="#contact">Консультація менеджера</a>
-            </div>
-          </div>
+  <span class="b1-cm tl"></span><span class="b1-cm tr"></span>
+  <span class="b1-cm bl"></span><span class="b1-cm br"></span>
+  <div class="b1-frame"></div>
 
-          <!-- ПРАВОРУЧ: фото-зразок, ВКРИТЕ кресленням (засічки/розміри/виноски) -->
-          <figure class="specimen">
-            <span class="sp-label mono">КРЕСЛЕННЯ · НАОЧНИЙ ВИД 3/4 · ЗРАЗОК 1V-0001</span>
-            <div class="sp-stage">
-              <div class="sp-frame">
-                <img src="assets/1vision-3q.png" alt="Інтерактивна панель 1-Vision — наочний вид 3/4" decoding="async" />
-                <div class="sp-draft" aria-hidden="true">
-                  <span class="ruler r-top"></span>
-                  <span class="ruler r-bottom"></span>
-                  <span class="ruler r-left"></span>
-                  <span class="ddim ddim-w"><b class="mono">86″ · 2184 mm</b></span>
-                  <span class="ddim ddim-h"><b class="mono">1100</b></span>
-                  <span class="diag"><b class="mono">Ø 86″</b></span>
-                  <span class="reticle"></span>
-                  <span class="cap cap-1"><i></i><b class="mono">ІЧ · 50 точок</b></span>
-                  <span class="cap cap-2"><i></i><b class="mono">4K UHD · IPS</b></span>
-                  <span class="cap cap-3"><i></i><b class="mono">OPS · i5</b></span>
-                  <span class="cap cap-4"><i></i><b class="mono">2.0 · 40 Вт</b></span>
-                </div>
-                <span class="sp-qc mono">QC&nbsp;✓&nbsp;12:39</span>
-                <div class="inst-corners"><span></span><span></span><span></span><span></span></div>
-              </div>
-            </div>
-            <div class="sp-plate mono buildplate etched">
-              <span class="brand">1-VISION</span>
-              <span>сер.№&nbsp;1V-0001</span>
-              <span>ВТК&nbsp;·&nbsp;UA</span>
-              <span class="pass"><i class="led"></i>PASS</span>
-            </div>
-          </figure>
-        </div>
+  <!-- top rail -->
+  <div class="b1-rail">
+    <span class="b1-seg"><span class="b1-g">ЦЕХ № 1</span> · ВТК · UA</span>
+    <span class="b1-seg">МАРКА 1-VISION · ПАРТІЯ 2026</span>
+  </div>
+
+  <!-- center stage: copy | trio panels -->
+  <div class="b1-stage">
+    <div class="bType">
+      <div class="ua-sticker"><img src="assets/made-in-ua.png" alt="Зроблено в Україні" /></div>
+      <h1 class="b1-h1">
+        <span class="b1-row b1-small">Інтерактивні панелі</span>
+        <span class="b1-row">Виробництво</span>
+        <span class="b1-row b1-big">1-Vision</span>
+      </h1>
+      <p class="b1-sub">Повний цикл — від матриці до пакування — на власному майданчику аерокосмічного приладобудування. Без посередників.</p>
+      <div class="b1-segs">
+        <span class="b1-segs-lbl">Сфери</span>
+        <span class="b1-seg-pill"><i></i>Освіта</span>
+        <span class="b1-seg-pill"><i></i>Бізнес</span>
+        <span class="b1-seg-pill"><i></i>Оборона</span>
+      </div>
+      <div class="b1-cta">
+        <a class="btn btn-gold" href="#contact">Замовити демонстрацію <span class="b1-ar">→</span></a>
+        <a class="btn btn-line" href="#contact">Екскурсія виробництвом</a>
       </div>
     </div>
+
+    <!-- Trio (layouts A / B / C) -->
+    <div class="b1-trio">
+      <!-- розмірне поле кресленика: дзеркалить buildplate знизу -->
+      <div class="b1-dimrail" aria-hidden="true">
+        <span class="b1-dim b1-dim65"><b>65″</b></span>
+        <span class="b1-dim b1-dim75"><b>75″</b></span>
+        <span class="b1-dim b1-dim86"><b>86″</b></span>
+      </div>
+      <div class="b1-trio-halo"></div>
+      <div class="b1-p b1-p86"><img src="assets/1vision-3q.png" alt="1-Vision 86″" /></div>
+      <div class="b1-p b1-p75"><img src="assets/1vision-3q.png" alt="1-Vision 75″" /></div>
+      <div class="b1-p b1-p65"><img src="assets/1vision-3q.png" alt="1-Vision 65″" /></div>
+    </div>
+
+    <!-- Nest (layout D) -->
+    <div class="b1-trio-nest">
+      <div class="b1-nest b1-n1"><img src="assets/1vision-3q.png" alt="1-Vision" />
+        <div class="b1-nest"><img src="assets/1vision-3q.png" alt="" />
+          <div class="b1-nest"><img src="assets/1vision-3q.png" alt="" /></div>
+        </div>
+      </div>
+      <span class="b1-badge b1-badge-abs">∞</span>
+    </div>
+  </div>
+
+  <!-- bottom plate -->
+  <div class="b1-tblock">
+    <div class="b1-tc name">1-VISION</div>
+    <div class="b1-tc">СЕР.№ 1V-0001 · 86″ 4K UHD</div>
+    <div class="b1-tc">ВТК · UA</div>
+    <div class="b1-tc pass"><span class="dot"></span> PASS</div>
   </div>
 
 </section>
 
+
 <!-- ============ BLOCK 2 · STATS + PARTNERS ============ -->
-<section class="sec stats grid-zone" id="stats" data-screen-label="Статистика">
+<section class="sec stats" id="stats" data-screen-label="Статистика">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Цифри, якими пишаємось</span>
@@ -231,7 +244,6 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
 
     <div class="monument reveal">
       <div class="mono-figure">
-        <div class="cells"><span class="cell"></span><span class="cell"></span></div>
         <div class="big"><span class="lit">1</span><span class="of3"> /3</span></div>
       </div>
       <div class="mono-copy">
@@ -239,7 +251,10 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
         <p>Кожна третя інтерактивна панель у країні — наша. Результат загальнонаціональної довіри та масштабного впровадження: працюємо в усіх вільних регіонах України, визнані лідером ринку 2025 на прозорій державній платформі.</p>
         <span class="prozorro"><span class="vd"></span>Лідер ринку · Prozorro Market 2025</span>
       </div>
-      <span class="cell on cell-accent" aria-hidden="true"></span>
+      <div class="monument-right">
+        <div class="cells"><span class="cell"></span><span class="cell"></span></div>
+        <span class="cell on cell-accent" aria-hidden="true"></span>
+      </div>
     </div>
 
     <div class="partners reveal">
@@ -267,14 +282,14 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
     </div>
 
     <div class="feat-grid reveal stagger">
-      <div class="feat"><div class="idx">01</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h4>4K UHD дисплей</h4><div class="spec">IPS · 3840×2160 · 400 кд/м²</div><p>IPS-матриця з кутами огляду 178° — чітке та яскраве зображення з будь-якої точки кабінету.</p></div>
-      <div class="feat"><div class="idx">02</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V6a2 2 0 0 1 4 0v5"/><path d="M13 11V4a2 2 0 0 1 4 0v9"/><path d="M17 9a2 2 0 0 1 4 0v4a8 8 0 0 1-8 8h-2a8 8 0 0 1-7-4l-2.5-4a2 2 0 0 1 3.4-2L9 14"/></svg></div><h4>50 точок дотику</h4><div class="spec">ІЧ-сенсор · відгук ≤ 5 мс</div><p>Кілька користувачів працюють з екраном одночасно — швидко й точно.</p></div>
-      <div class="feat"><div class="idx">03</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Захисне скло</h4><div class="spec">Zero bonding · антиблік</div><p>Загартоване антиблікове скло та фільтр блакитного світла — безпечно для очей.</p></div>
-      <div class="feat"><div class="idx">04</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h4>Ресурс 50 000 годин</h4><div class="spec">роки щоденної роботи</div><p>Матриця розрахована на багаторічну щоденну експлуатацію в інтенсивному режимі.</p></div>
-      <div class="feat"><div class="idx">05</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></div><h4>Продуктивна платформа</h4><div class="spec">Android 14 · до 16 / 256 ГБ</div><p>Конфігурації 8 / 128 ГБ та Pro Max 16 / 256 ГБ для плавної роботи без затримок.</p></div>
-      <div class="feat"><div class="idx">06</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h.01M7 13h6"/></svg></div><h4>Слот OPS</h4><div class="spec">i5 12Gen · 16 ГБ · 512 ГБ</div><p>Вбудований комп'ютерний модуль — повноцінний ПК всередині панелі.</p></div>
-      <div class="feat"><div class="idx">07</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.8a15 15 0 0 1 20 0"/><circle cx="12" cy="20" r="1"/></svg></div><h4>Бездротові підключення</h4><div class="spec">Wi-Fi · Bluetooth · трансляція</div><p>Транслюйте контент з будь-якого пристрою — без кабелів і перемикань.</p></div>
-      <div class="feat"><div class="idx">08</div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/></svg></div><h4>Вбудована акустика</h4><div class="spec">стерео 2.0 · 40 Вт</div><p>Потужна стереосистема — звук чути в кожному куточку аудиторії.</p></div>
+      <div class="feat"><div class="fmark">4K<span class="u">IPS</span></div><h4>UHD-дисплей</h4><div class="spec">3840×2160 · 400 кд/м² · 1200:1</div><p>IPS-матриця з кутами огляду 178° — чітке та яскраве зображення з будь-якої точки кабінету.</p></div>
+      <div class="feat"><div class="fmark">50<span class="u">точок</span></div><h4>Мультитач</h4><div class="spec">ІЧ-сенсор · відгук ≤ 5 мс</div><p>Кілька користувачів працюють з екраном одночасно — швидко й точно.</p></div>
+      <div class="feat"><div class="fmark">7H<span class="u">4 мм</span></div><h4>Захисне скло</h4><div class="spec">загартоване · антиблік · zero-bonding</div><p>Загартоване антиблікове скло та фільтр блакитного світла — безпечно для очей.</p></div>
+      <div class="feat"><div class="fmark">50K<span class="u">годин</span></div><h4>Ресурс матриці</h4><div class="spec">роки щоденної роботи</div><p>Матриця розрахована на багаторічну щоденну експлуатацію в інтенсивному режимі.</p></div>
+      <div class="feat"><div class="fmark">16<span class="u">ГБ ОЗП</span></div><h4>Продуктивна платформа</h4><div class="spec">Android 14 / 16 · накопичувач до 256 ГБ</div><p>Конфігурації 8 / 128 ГБ та Pro Max 16 / 256 ГБ для плавної роботи без затримок.</p></div>
+      <div class="feat"><div class="fmark fmark--sm">OPS<span class="u">слот</span></div><h4>Вбудований ПК</h4><div class="spec">i5 12Gen · 16 ГБ · 512 ГБ</div><p>Вбудований комп'ютерний модуль — повноцінний ПК всередині панелі.</p></div>
+      <div class="feat"><div class="fmark fmark--sm">Wi-Fi<span class="u">6 · BT 5</span></div><h4>Бездротові підключення</h4><div class="spec">трансляція екрана · без кабелів</div><p>Транслюйте контент з будь-якого пристрою — без кабелів і перемикань.</p></div>
+      <div class="feat"><div class="fmark">40<span class="u">Вт</span></div><h4>Вбудована акустика</h4><div class="spec">стерео 2.0 · опція: саундбар</div><p>Потужна стереосистема — звук чути в кожному куточку аудиторії. Доступна опція з саундбаром.</p></div>
     </div>
 
     <div class="compliance reveal">
@@ -294,12 +309,12 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
         <h2>Виробляємо в Україні —<br>без посередників</h2>
         <p class="lede">Панелі 1-Vision виробляються на базі підприємства аерокосмічного приладобудування «Київприлад». Консультують фахівці з виробництва напряму.</p>
         <div class="made-points">
-          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l5-3v16M14 21V5l5 3v13"/><path d="M9 9h.01M9 13h.01M9 17h.01"/></svg></div><div><h4>Власне виробництво</h4><p>На базі підприємства аерокосмічного приладобудування «Київприлад».</p></div></div>
-          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></div><div><h4>10 000 м² майданчику</h4><p>Виробничий простір із сучасним обладнанням.</p></div></div>
-          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2 2.6-2.6z"/></svg></div><div><h4>Гарантія та підтримка від виробника</h4><p>Технічна підтримка та віддалене налаштування напряму.</p></div></div>
-          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 9h4l3 3v3a2 2 0 0 1-2 2h-1"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><div><h4>Доставка та встановлення</h4><p>У будь-яку точку України — заносимо, монтуємо й налаштовуємо на місці.</p></div></div>
-          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 0 1-4 0v-.1A1.6 1.6 0 0 0 7 19.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 3 12.9H3a2 2 0 0 1 0-4h.1A1.6 1.6 0 0 0 4.6 6"/></svg></div><div><h4>Сервісне обслуговування</h4><p>На заводі виробника; за потреби майстер виїжджає до замовника.</p></div></div>
-          <div class="mp"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10M18 21V10M4 10l8-6 8 6M9 21v-5h6v5"/></svg></div><div><h4>Готовність до держзакупівель</h4><p>Представлені у каталозі Prozorro Market, повний пакет документів для тендерів.</p></div></div>
+          <div class="mp"><div class="ic"></div><div><h4>Власне виробництво</h4><p>На базі підприємства аерокосмічного приладобудування «Київприлад».</p></div></div>
+          <div class="mp"><div class="ic"></div><div><h4>Спадщина поколінь</h4><p>«Київприлад» — підприємство аерокосмічного приладобудування з багаторічною інженерною традицією. Досвід поколінь майстрів — у кожній панелі.</p></div></div>
+          <div class="mp"><div class="ic"></div><div><h4>Гарантія та підтримка від виробника</h4><p>Технічна підтримка та віддалене налаштування напряму.</p></div></div>
+          <div class="mp"><div class="ic"></div><div><h4>Доставка та встановлення</h4><p>У будь-яку точку України — заносимо, монтуємо й налаштовуємо на місці.</p></div></div>
+          <div class="mp"><div class="ic"></div><div><h4>Сервісне обслуговування</h4><p>На заводі виробника; за потреби майстер виїжджає до замовника.</p></div></div>
+          <div class="mp"><div class="ic"></div><div><h4>Готовність до держзакупівель</h4><p>Представлені у каталозі Prozorro Market, повний пакет документів для тендерів.</p></div></div>
         </div>
       </div>
       <div class="made-vis reveal">
@@ -323,7 +338,7 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
 </section>
 
 <!-- ============ BLOCK 5 · SOFTWARE ============ -->
-<section class="sec software grid-zone" id="software" data-screen-label="Софт">
+<section class="sec software" id="software" data-screen-label="Софт">
   <div class="wrap">
     <div class="sw-grid">
       <div class="sw-copy reveal">
@@ -353,15 +368,15 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
             <div class="ph-label">SCREENSHOT · ПЗ 1-Vision</div>
           </div>
         </div>
-        <div class="sw-float" style="top:-18px;right:-14px;"><div class="k">ТРАНСЛЯЦІЯ</div><div class="v">Wi-Fi · 3 пристрої</div></div>
-        <div class="sw-float" style="bottom:-16px;left:-16px;"><div class="k">ЛОКАЛІЗАЦІЯ</div><div class="v">🇺🇦 Українська</div></div>
+        <div class="sw-float sw-float-tr"><div class="k">ТРАНСЛЯЦІЯ</div><div class="v">Wi-Fi · 3 пристрої</div></div>
+        <div class="sw-float sw-float-bl"><div class="k">ЛОКАЛІЗАЦІЯ</div><div class="v">🇺🇦 Українська</div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ BLOCK 6 · USE CASES ============ -->
-<section class="sec cases grid-zone" id="cases" data-screen-label="Застосування">
+<section class="sec cases" id="cases" data-screen-label="Застосування">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Сфери застосування</span>
@@ -448,13 +463,13 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
         <h3>Не знайшли свій сценарій?</h3>
         <p>Розкажіть про задачу — підберемо діагональ, ПЗ і комплектуючі під ваш процес.</p>
       </div>
-      <a class="btn btn-primary" href="#contact">Обговорити мій сценарій</a>
+      <a class="btn btn-gold" href="#contact">Обговорити мій сценарій</a>
     </div>
   </div>
 </section>
 
 <!-- ============ BLOCK 7 · MODELS + ACCESSORIES ============ -->
-<section class="sec models grid-zone" id="models" data-screen-label="Моделі">
+<section class="sec models" id="models" data-screen-label="Моделі">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Моделі та комплектуючі</span>
@@ -520,7 +535,7 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
 </section>
 
 <!-- ============ BLOCK 8 · CONTACT + FORM ============ -->
-<section class="sec contact grid-zone" id="contact" data-screen-label="Контакти">
+<section class="sec contact" id="contact" data-screen-label="Контакти">
   <div class="wrap">
     <div class="contact-grid">
       <div class="contact-copy reveal">
@@ -536,6 +551,7 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
       </div>
 
       <div class="form-card reveal">
+        <div class="fc-corners" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
         <form id="leadForm">
           <!-- Web3Forms: встав свій access key у value нижче.
                Отримати за 30 сек: web3forms.com → введи email (краще office@eddygroup.eu) → ключ прийде на пошту. -->
@@ -609,6 +625,11 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
   </div>
 </footer>
 
+
+<!-- sticky mobile CTA (з'являється після хіро, ховається на формі) -->
+<a class="m-cta" href="#contact" aria-label="Замовити демонстрацію 1-Vision">
+  <span>Замовити демонстрацію</span><span class="m-cta-ar" aria-hidden="true">→</span>
+</a>
 
 <!-- vanilla tweaks panel -->
 <div id="twkRoot"></div>

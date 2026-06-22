@@ -65,11 +65,42 @@
     }, { passive: true });
   }
 
+  /* ---------- sticky mobile CTA + drawer (scroll-locked) ---------- */
+  var mcta = document.querySelector('.m-cta');
+  var mctaState = { pastHero: false, atContact: false };
+  function updateMCTA() {
+    if (!mcta) return;
+    mcta.classList.toggle('show',
+      mctaState.pastHero && !mctaState.atContact && !document.body.classList.contains('nav-open'));
+  }
+  if (mcta) {
+    var onMctaScroll = function () {
+      mctaState.pastHero = (window.scrollY || 0) > (window.innerHeight * 0.66);
+      updateMCTA();
+    };
+    window.addEventListener('scroll', onMctaScroll, { passive: true }); onMctaScroll();
+    if ('IntersectionObserver' in window) {
+      var contactSec = document.getElementById('contact');
+      if (contactSec) new IntersectionObserver(function (es) {
+        mctaState.atContact = es[0].isIntersecting; updateMCTA();
+      }, { threshold: 0 }).observe(contactSec);
+    }
+  }
+
   var burger = document.getElementById('burger');
-  if (burger) burger.addEventListener('click', function () { document.body.classList.toggle('nav-open'); });
-  document.querySelectorAll('[data-close]').forEach(function (el) {
-    el.addEventListener('click', function () { document.body.classList.remove('nav-open'); });
+  function setNavOpen(open) {
+    document.body.classList.toggle('nav-open', open);
+    document.documentElement.style.overflow = open ? 'hidden' : '';   // lock background scroll
+    updateMCTA();
+  }
+  if (burger) burger.addEventListener('click', function () {
+    setNavOpen(!document.body.classList.contains('nav-open'));
   });
+  document.querySelectorAll('[data-close]').forEach(function (el) {
+    el.addEventListener('click', function () { setNavOpen(false); });
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setNavOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 900) setNavOpen(false); }, { passive: true });
 
   /* ---------- counters ---------- */
   function fmt(val, dec) {
