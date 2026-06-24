@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <title>Інтерактивні панелі 1-Vision — Eddy Group, Україна</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
 <!-- ============ SEO ============
      TODO: коли буде фінальний домен — заміни https://1vision.eddygroup.eu/ у:
@@ -16,6 +16,7 @@
 <link rel="canonical" href="https://1vision.eddygroup.eu/" />
 <link rel="icon" type="image/svg+xml" href="assets/eddy-black.svg" />
 <link rel="apple-touch-icon" href="assets/eddy-black.svg" />
+<link rel="preload" as="image" href="assets/panel-festival.webp" fetchpriority="high" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -116,10 +117,7 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
     <a class="brand" href="#top">
       <img class="logo" src="assets/eddy-black.svg" alt="Eddy Group" />
       <span class="vline"></span>
-      <span>
-        <span class="pname"><span class="one">1</span>Vision</span>
-        <div class="ptag">Інтерактивні панелі</div>
-      </span>
+      <img class="logo logo-1v" src="assets/1vision-logo.svg" alt="1-Vision" />
     </a>
     <div class="nav-links">
       <a href="#models">Моделі</a>
@@ -129,13 +127,13 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
     </div>
     <div class="nav-cta">
       <a class="btn btn-primary btn-sm" href="#contact">Залишити заявку</a>
-      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
 <!-- mobile drawer -->
-<div class="drawer" id="drawer">
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Меню" aria-hidden="true">
   <div class="scrim" data-close></div>
   <div class="sheet">
     <a href="#models" data-close>Моделі</a>
@@ -187,7 +185,7 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
       </div>
       <div class="b1-cta">
         <a class="btn btn-gold" href="#contact">Замовити демонстрацію <span class="b1-ar">→</span></a>
-        <a class="btn btn-line" href="#contact">Екскурсія виробництвом</a>
+        <a class="btn btn-line" href="#made">Екскурсія виробництвом</a>
       </div>
     </div>
 
@@ -200,9 +198,11 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
         <span class="b1-dim b1-dim86"><b>86″</b></span>
       </div>
       <div class="b1-trio-halo"></div>
-      <div class="b1-p b1-p86"><img src="assets/1vision-3q.png" alt="1-Vision 86″" /></div>
-      <div class="b1-p b1-p75"><img src="assets/1vision-3q.png" alt="1-Vision 75″" /></div>
-      <div class="b1-p b1-p65"><img src="assets/1vision-3q.png" alt="1-Vision 65″" /></div>
+      <div class="b1-beam" aria-hidden="true"></div>
+      <div class="b1-p b1-p86"><img src="assets/panel-festival.webp" alt="Панель 1-Vision 86″ — інтерактивна мапа фестивалю на екрані" decoding="async" fetchpriority="high" /></div>
+      <div class="b1-p b1-p75"><img src="assets/panel-tactical.webp" alt="Панель 1-Vision 75″ — оперативна мапа регіону на екрані" decoding="async" /></div>
+      <div class="b1-p b1-p65"><img src="assets/panel-satellite.webp" alt="Панель 1-Vision 65″ — освітній тест про супутниковий зв'язок на екрані" decoding="async" /></div>
+      <div class="b1-sweep" aria-hidden="true"></div>
     </div>
 
     <!-- Nest (layout D) -->
@@ -244,29 +244,15 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
 
     <div class="monument reveal">
       <div class="mono-figure">
-        <div class="big"><span class="lit">1</span><span class="of3"> /3</span></div>
+        <div class="big"><span class="lit">1</span><span class="sep"> /</span><span class="of3">3</span></div>
       </div>
       <div class="mono-copy">
         <h3>панелей в Україні — 1-Vision</h3>
-        <p>Кожна третя інтерактивна панель у країні — наша. Результат загальнонаціональної довіри та масштабного впровадження: працюємо в усіх вільних регіонах України, визнані лідером ринку 2025 на прозорій державній платформі.</p>
+        <p>Кожна третя інтерактивна панель у навчальних закладах України — наша. Визнані лідером ринку 2025 на платформі публічних закупівель Prozorro.</p>
         <span class="prozorro"><span class="vd"></span>Лідер ринку · Prozorro Market 2025</span>
       </div>
       <div class="monument-right">
-        <div class="cells"><span class="cell"></span><span class="cell"></span></div>
-        <span class="cell on cell-accent" aria-hidden="true"></span>
-      </div>
-    </div>
-
-    <div class="partners reveal">
-      <div class="lbl tick">Працюємо та сумісні з рішеннями</div>
-      <div class="partner-row">
-        <span class="partner"><img src="assets/partners/lenovo.svg" alt="Lenovo" loading="lazy" /></span>
-        <span class="partner emblem"><img src="assets/partners/unesco.svg" alt="UNESCO" loading="lazy" /></span>
-        <span class="partner"><img src="assets/partners/benq.svg" alt="BenQ" loading="lazy" /></span>
-        <span class="partner"><img src="assets/partners/iiyama.svg" alt="iiyama" loading="lazy" /></span>
-        <span class="partner"><img src="assets/partners/google.svg" alt="Google" loading="lazy" /></span>
-        <span class="partner"><img src="assets/partners/starboard.webp" alt="StarBoard" loading="lazy" /></span>
-        <span class="partner"><img src="assets/partners/microsoft.svg" alt="Microsoft" loading="lazy" /></span>
+        <div class="cells"><span class="cell on"></span><span class="cell"></span><span class="cell"></span></div>
       </div>
     </div>
   </div>
@@ -319,19 +305,9 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
       </div>
       <div class="made-vis reveal">
         <div class="made-photo">
-          <div style="aspect-ratio:4/5;position:relative;background:radial-gradient(120% 100% at 60% 20%,#1B2129,#0C0E12);">
-            <div class="ph-stripe" style="background-image:repeating-linear-gradient(135deg,rgba(150,180,220,.07) 0 14px,transparent 14px 28px)"></div>
-            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#8A929D;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;">
-              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#5C6470" stroke-width="1.6" style="margin:0 auto 12px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-              ФОТО З ВИРОБНИЦТВА<br><span style="opacity:.6">складання панелей · чиста зона</span>
-            </div>
-          </div>
+          <img src="assets/made-floor.jpg" alt="Складання інтерактивних панелей 1-Vision на виробництві «Київприлад» — чиста зона" loading="lazy" decoding="async" width="1600" height="899" />
         </div>
         <div class="made-badge"><span class="flag"></span><div><b>Made in Ukraine</b><span>Виробництво «Київприлад»</span></div></div>
-        <div class="made-mini">
-          <div class="m"><div class="v">10 000 м²</div><div class="k">виробничий майданчик</div></div>
-          <div class="m"><div class="v">0</div><div class="k">посередників</div></div>
-        </div>
       </div>
     </div>
   </div>
@@ -384,16 +360,16 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
       <p>Освіта, бізнес і публічні простори: підбираємо діагональ, ПЗ та комплектацію під ваш процес.</p>
     </div>
 
-    <div class="case-tabs reveal" id="caseTabs">
-      <button class="case-tab active" data-case="0"><span class="num">01</span>Презентація та навчання</button>
-      <button class="case-tab" data-case="1"><span class="num">02</span>Навігація та самообслуговування</button>
-      <button class="case-tab" data-case="2"><span class="num">03</span>Замовлення та вибір</button>
-      <button class="case-tab" data-case="3"><span class="num">04</span>Робота та координація</button>
+    <div class="case-tabs reveal" id="caseTabs" role="tablist" aria-label="Сфери застосування">
+      <button class="case-tab active" data-case="0" role="tab" id="casetab-0" aria-controls="casepanel-0" aria-selected="true"><span class="num">01</span>Презентація та навчання</button>
+      <button class="case-tab" data-case="1" role="tab" id="casetab-1" aria-controls="casepanel-1" aria-selected="false"><span class="num">02</span>Навігація та самообслуговування</button>
+      <button class="case-tab" data-case="2" role="tab" id="casetab-2" aria-controls="casepanel-2" aria-selected="false"><span class="num">03</span>Замовлення та вибір</button>
+      <button class="case-tab" data-case="3" role="tab" id="casetab-3" aria-controls="casepanel-3" aria-selected="false"><span class="num">04</span>Робота та координація</button>
     </div>
 
     <div class="case-wrap reveal">
       <!-- 1 -->
-      <div class="case-panel active">
+      <div class="case-panel active" role="tabpanel" id="casepanel-0" aria-labelledby="casetab-0">
         <div class="case-card">
           <div class="case-body">
             <div class="where"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Школи · курси · конференц-зали · корпоративне навчання</div>
@@ -405,11 +381,13 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
               <div class="adv"><div class="stat-n">50</div><p>точок дотику дозволяють кільком учням працювати з екраном одночасно — це розвиває командну взаємодію.</p></div>
             </div>
           </div>
-          <div class="case-vis"><div class="ph-stripe"></div><svg class="big-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="ph-tag">ФОТО · урок біля панелі</span></div>
+          <div class="case-vis"><div class="case-shots">
+            <figure><img src="assets/case-office.jpg" alt="Презентація фінансового звіту на інтерактивній панелі для команди" loading="lazy" decoding="async" width="1200" height="625" /></figure>
+          </div></div>
         </div>
       </div>
       <!-- 2 -->
-      <div class="case-panel">
+      <div class="case-panel" role="tabpanel" id="casepanel-1" aria-labelledby="casetab-1">
         <div class="case-card">
           <div class="case-body">
             <div class="where"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 22V12h6v10M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Бізнес-центри · готелі · лікарні · музеї · аеропорти</div>
@@ -421,11 +399,14 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
               <div class="adv"><div class="stat-n">+час</div><p>персонал вивільняється від рутини й переходить до якіснішої взаємодії з відвідувачами.</p></div>
             </div>
           </div>
-          <div class="case-vis"><div class="ph-stripe"></div><svg class="big-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 22V12h6v10M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span class="ph-tag">ФОТО · панель у холі</span></div>
+          <div class="case-vis"><div class="case-shots">
+            <figure><img src="assets/case-clinic.jpg" alt="Панель 1-Vision з електронною чергою у холі медзакладу" loading="lazy" decoding="async" width="1200" height="611" /></figure>
+            <figure><img src="assets/case-hotel.jpg" alt="Самостійне бронювання номера на інтерактивній панелі в готелі" loading="lazy" decoding="async" width="1200" height="558" /></figure>
+          </div></div>
         </div>
       </div>
       <!-- 3 -->
-      <div class="case-panel">
+      <div class="case-panel" role="tabpanel" id="casepanel-2" aria-labelledby="casetab-2">
         <div class="case-card">
           <div class="case-body">
             <div class="where"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Кафе · ресторани · фастфуд · рітейл · шоуруми</div>
@@ -437,11 +418,14 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
               <div class="adv"><div class="stat-n">UX</div><p>інтерактивний вибір на великому екрані відповідає звичкам молодшої аудиторії.</p></div>
             </div>
           </div>
-          <div class="case-vis"><div class="ph-stripe"></div><svg class="big-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span class="ph-tag">ФОТО · кіоск самообслуговування</span></div>
+          <div class="case-vis"><div class="case-shots">
+            <figure><img src="assets/case-wok.jpg" alt="Самостійне замовлення страв на сенсорній панелі в ресторані" loading="lazy" decoding="async" width="1200" height="864" /></figure>
+            <figure><img src="assets/case-retail.jpg" alt="Перевірка наявності розміру взуття на панелі в магазині" loading="lazy" decoding="async" width="1200" height="866" /></figure>
+          </div></div>
         </div>
       </div>
       <!-- 4 -->
-      <div class="case-panel">
+      <div class="case-panel" role="tabpanel" id="casepanel-3" aria-labelledby="casetab-3">
         <div class="case-card">
           <div class="case-body">
             <div class="where"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Переговорки · штаби · диспетчерські · проєктні офіси</div>
@@ -453,7 +437,9 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
               <div class="adv"><div class="stat-n">∞</div><p>мультитач і бездротова трансляція з будь-якого пристрою — команда працює спільно, а не по черзі.</p></div>
             </div>
           </div>
-          <div class="case-vis"><div class="ph-stripe"></div><svg class="big-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M7 21h10M12 17v4"/></svg><span class="ph-tag">ФОТО · переговорна кімната</span></div>
+          <div class="case-vis"><div class="case-shots">
+            <figure><img src="assets/case-hq.jpg" alt="Координація на тактичній карті на великій інтерактивній панелі 1-Vision" loading="lazy" decoding="async" width="1200" height="582" /></figure>
+          </div></div>
         </div>
       </div>
     </div>
@@ -477,6 +463,11 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
       <p>Три конфігурації панелі та діагоналі 65", 75", 86". Доповнюйте стійками, кріпленнями та OPS-модулем.</p>
     </div>
 
+    <div class="model-dots" aria-hidden="true">
+      <span class="mdot"></span>
+      <span class="mdot"></span>
+      <span class="mdot"></span>
+    </div>
     <div class="model-grid reveal stagger">
       <div class="model">
         <div class="vis"><div class="ph-stripe"></div><span class="tag">65" / 75" / 86"</span><div class="panel-ic"></div></div>
@@ -561,11 +552,11 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
           <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
           <h3>Заявка на 1-Vision</h3>
           <div class="sub">Підберемо діагональ, комплектацію та проведемо демонстрацію.</div>
-          <div class="field"><label>Ім'я та прізвище <span class="req">*</span></label><input type="text" name="name" required placeholder="Іван Петренко" /></div>
-          <div class="field"><label>Назва закладу / компанії</label><input type="text" name="org" placeholder="Школа №— / ТОВ —" /></div>
+          <div class="field"><label>Ім'я та прізвище <span class="req">*</span></label><input type="text" name="name" required autocomplete="name" placeholder="Іван Петренко" /></div>
+          <div class="field"><label>Назва закладу / компанії</label><input type="text" name="org" autocomplete="organization" placeholder="Школа №— / ТОВ —" /></div>
           <div class="field row">
-            <div><label>Телефон <span class="req">*</span></label><input type="tel" name="phone" required placeholder="+380 —" /></div>
-            <div><label>Email</label><input type="email" name="email" placeholder="you@mail.com" /></div>
+            <div><label>Телефон <span class="req">*</span></label><input type="tel" name="phone" required inputmode="tel" autocomplete="tel" placeholder="+380 —" /></div>
+            <div><label>Email</label><input type="email" name="email" inputmode="email" autocomplete="email" placeholder="you@mail.com" /></div>
           </div>
           <div class="field"><label>Коментар</label><textarea name="comment" placeholder="Напр. «Цікавить 1-Vision 75 зі стійкою»"></textarea></div>
           <button class="btn btn-primary" type="submit">Надіслати заявку на 1-Vision</button>

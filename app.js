@@ -88,9 +88,17 @@
   }
 
   var burger = document.getElementById('burger');
+  var drawer = document.getElementById('drawer');
   function setNavOpen(open) {
+    var wasOpen = document.body.classList.contains('nav-open');
     document.body.classList.toggle('nav-open', open);
     document.documentElement.style.overflow = open ? 'hidden' : '';   // lock background scroll
+    if (burger) burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (drawer) drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+    // move focus into the drawer on open; return it to the burger only if it was
+    // genuinely open (guards against the resize>900 handler stealing focus on desktop)
+    if (open) { var first = drawer && drawer.querySelector('.sheet a'); if (first) first.focus(); }
+    else if (wasOpen && burger) { burger.focus(); }
     updateMCTA();
   }
   if (burger) burger.addEventListener('click', function () {
@@ -151,9 +159,10 @@
   tabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
       var i = +tab.getAttribute('data-case');
-      tabs.forEach(function (t) { t.classList.remove('active'); });
+      tabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
       panels.forEach(function (p) { p.classList.remove('active'); });
       tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
       if (panels[i]) panels[i].classList.add('active');
     });
   });
@@ -388,4 +397,21 @@
     else if (t === '__deactivate_edit_mode') showPanel(false);
   });
   try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) {}
+})();
+
+/* ---------- model carousel dots ---------- */
+(function () {
+  var grid = document.querySelector('.model-grid');
+  var dots = document.querySelectorAll('.mdot');
+  if (!grid || !dots.length) return;
+  function update() {
+    var cards = grid.querySelectorAll('.model');
+    if (!cards.length) return;
+    var gap = parseFloat(getComputedStyle(grid).gap) || 14;
+    var cardW = cards[0].offsetWidth + gap;
+    var idx = Math.min(Math.round(grid.scrollLeft / cardW), dots.length - 1);
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+  }
+  grid.addEventListener('scroll', update, { passive: true });
+  update();
 })();

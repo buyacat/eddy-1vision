@@ -135,6 +135,7 @@ body{counter-reset:secno;}
 @media(prefers-reduced-motion:reduce){.nav.scrolled .nav-inner::after{animation:none;opacity:0;}}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand .logo{height:26px;width:auto;}
+.brand .logo-1v{height:22px;}
 .brand .vline{width:1px;height:26px;background:var(--line);}
 .brand .pname{font-family:"Sora",sans-serif;font-weight:700;font-size:18px;
   color:var(--accent);line-height:1;letter-spacing:-.02em;}
@@ -240,7 +241,7 @@ body{counter-reset:secno;}
 /* ============================================================
    STATS BAND + theses + partners
    ============================================================ */
-.stats{background:linear-gradient(180deg,#fff 0%,var(--sky-3) 100%);}
+.stats{background:linear-gradient(180deg,#fff 0%,var(--sky-3) 100%);padding-bottom:60px;}
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1.5px solid var(--ink);}
 .stat{padding:26px 26px 6px;background:none;border:none;border-radius:0;box-shadow:none;
   position:relative;border-right:1px solid var(--line);}
@@ -327,6 +328,7 @@ body{counter-reset:secno;}
 .made-vis{position:relative;}
 .made-photo{border-radius:5px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);
   border:1px solid var(--hair);}
+.made-photo img{display:block;width:100%;height:100%;aspect-ratio:16/10;object-fit:cover;}
 .made-badge{position:absolute;left:-22px;bottom:26px;background:#fff;color:var(--ink);
   border-radius:6px;padding:16px 20px;box-shadow:0 30px 60px -24px rgba(0,0,0,.5);
   display:flex;align-items:center;gap:14px;max-width:260px;}
@@ -430,6 +432,9 @@ body{counter-reset:secno;}
   font-size:11px;color:var(--slate-2);background:rgba(255,255,255,.7);padding:6px 12px;border-radius:8px;}
 .case-vis .big-ic{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
   width:96px;height:96px;color:var(--accent);opacity:.5;}
+.case-shots{position:absolute;inset:0;display:grid;grid-auto-rows:1fr;gap:4px;padding:4px;}
+.case-shots figure{margin:0;position:relative;overflow:hidden;border-radius:6px;background:#0C0E12;}
+.case-shots img{display:block;width:100%;height:100%;object-fit:cover;}
 .case-cta{margin-top:24px;border-radius:22px;padding:34px 38px;
   background:linear-gradient(150deg,var(--sheet) 0%,var(--sheet-2) 100%);color:#fff;display:flex;
   align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
@@ -441,6 +446,7 @@ body{counter-reset:secno;}
    MODELS + ACCESSORIES
    ============================================================ */
 .models{background:linear-gradient(180deg,var(--sky) 0%,#fff 50%);}
+.model-dots{display:none;}
 .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px;}
 .model{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;
   box-shadow:var(--shadow-card);display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s;}
@@ -633,13 +639,16 @@ body{counter-reset:secno;}
 }
 @media(max-width:560px){
   .wrap{padding:0 20px;}
-  .stat-grid,.feat-grid,.acc-grid,.footer-top{grid-template-columns:1fr;}
+  .stat-grid,.footer-top{grid-template-columns:1fr;}
+  .acc-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
   .field.row{grid-template-columns:1fr;}
   .counters{gap:18px;}
   .case-body{padding:30px 26px;}
   .form-card{padding:26px;}
 }
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important;}
   .reveal{opacity:1;transform:none;}}
 
 /* ---------- datasheet detailing ---------- */
@@ -733,15 +742,12 @@ body{font-variant-numeric:tabular-nums lining-nums;}
   border:1.5px solid rgba(255,255,255,.22);}
 .monument .cell.on{background:var(--signal);border-color:var(--signal);
   box-shadow:0 0 30px -6px var(--signal),inset 0 1px 0 rgba(255,255,255,.4);}
-/* yellow accent card on the right column — stretches to full row height */
-.monument .cell-accent{position:relative;z-index:1;align-self:stretch;
-  width:clamp(30px,3.4vw,44px);border-radius:4px;
-  background:var(--signal);border:1.5px solid var(--signal);
-  box-shadow:0 0 36px -6px var(--signal),inset 0 1px 0 rgba(255,255,255,.4);}
+
 .monument .big{font-family:"Unbounded",sans-serif;font-weight:800;line-height:.85;letter-spacing:-.04em;
   font-size:clamp(60px,10vw,120px);color:#fff;}
 .monument .big .lit{color:var(--signal);}
-.monument .big .of3{color:rgba(255,255,255,.28);font-size:.52em;letter-spacing:-.02em;vertical-align:middle;padding-left:.08em;}
+.monument .big .sep{color:rgba(255,255,255,.28);font-size:.52em;letter-spacing:-.02em;vertical-align:middle;padding-left:.08em;}
+.monument .big .of3{color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.35);letter-spacing:-.04em;padding-left:.06em;}
 .monument .mono-copy{position:relative;z-index:1;}
 .monument h3{font-size:clamp(20px,2.2vw,28px);font-weight:700;margin:0 0 10px;color:#fff;}
 .monument p{font-size:14px;line-height:1.6;color:#C2CAD4;margin:0 0 14px;max-width:460px;}
@@ -1083,14 +1089,58 @@ body:has([data-hero="b1"]) .nav:not(.scrolled) .burger span{background:rgba(236,
 
 /* ---- trio container ---- */
 .b1-trio{position:relative;z-index:1;width:100%;height:clamp(300px,52vh,480px);}
-.b1-trio-halo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:90%;height:90%;
-  border-radius:50%;filter:blur(40px);z-index:0;
-  background:radial-gradient(50% 50% at 50% 50%,rgba(176,204,238,.14),rgba(176,204,238,.04) 60%,transparent 78%);}
+.b1-trio-halo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:108%;height:104%;
+  border-radius:50%;filter:blur(80px);z-index:0;
+  background:radial-gradient(50% 50% at 50% 50%,rgba(176,204,238,.12),rgba(176,204,238,.035) 48%,transparent 88%);}
+
+/* одна м'яка контактна тінь під усією групою — панелі більше не затіняють одна одну */
+.b1-trio::before{content:"";position:absolute;left:50%;bottom:-2%;transform:translateX(-50%);
+  width:70%;height:13%;z-index:0;pointer-events:none;border-radius:50%;
+  filter:blur(36px);
+  background:radial-gradient(50% 100% at 50% 50%,rgba(0,0,0,.5),rgba(0,0,0,.2) 52%,transparent 78%);}
+
+/* ── консіліум: «повний стек» підсвітки за екранами ──────────────────────
+   1) холодний промінь-конус згори-справа (джерело й напрям світла)
+   2) rim-light на панелях (вище) + відбиток-«підлога» знизу — відрив від фону
+   3) одноразовий specular-sweep при появі героя.
+   Дисципліна кольору: світло ЛИШЕ сталево-синє; золото не чіпаємо. */
+
+/* 1 · ключовий промінь-конус */
+.b1-beam{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.7;
+  background:radial-gradient(54% 64% at 68% 14%,
+    rgba(190,216,248,.12),rgba(176,206,244,.035) 52%,transparent 80%);
+  filter:blur(34px);
+  animation:b1Beam 9s ease-in-out infinite alternate;}
+@keyframes b1Beam{from{opacity:.5;}to{opacity:.78;}}
+
+/* 2 · відбиток-«підлога» під тріо (холодний bounce) */
+.b1-trio::after{content:"";position:absolute;left:50%;bottom:2%;transform:translateX(-50%);
+  width:86%;height:30%;z-index:0;pointer-events:none;border-radius:50%;
+  filter:blur(64px);
+  background:radial-gradient(50% 100% at 50% 50%,rgba(150,186,236,.16),rgba(150,186,236,.035) 58%,transparent 86%);}
+
+/* 3 · specular-sweep — одне світло проходить по склу при появі */
+.b1-sweep{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden;}
+.b1-sweep::before{content:"";position:absolute;top:0;left:0;width:42%;height:100%;
+  transform:translateX(-185%) rotate(8deg);
+  background:radial-gradient(38% 58% at 50% 50%,
+    rgba(226,238,255,.09),rgba(210,228,252,.03) 52%,transparent 78%);
+  filter:blur(26px);mix-blend-mode:screen;
+  animation:b1Sweep 3s cubic-bezier(.4,0,.1,1) .6s 1 both;}
+@keyframes b1Sweep{
+  0%{transform:translateX(-185%) rotate(8deg);opacity:0;}
+  16%{opacity:1;}
+  84%{opacity:1;}
+  100%{transform:translateX(380%) rotate(8deg);opacity:0;}}
+
+@media(prefers-reduced-motion:reduce){
+  .b1-beam{animation:none;opacity:.5;}
+  .b1-sweep::before{animation:none;opacity:0;}}
+
 .b1-p{position:absolute;}
 .b1-p img{width:100%;height:auto;transform:rotate(var(--rot,0deg));transform-origin:center bottom;
-  filter:drop-shadow(0 20px 36px rgba(0,0,0,.65));
-  -webkit-mask-image:linear-gradient(180deg,#000 88%,transparent 100%);
-  mask-image:linear-gradient(180deg,#000 88%,transparent 100%);}
+  -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 78%,transparent 100%);}
 
 /* ---- layout A — глибина: менша спереду зліва, більша позаду справа ---- */
 /* 65" — найменша, найближча до глядача, зліва */
@@ -1099,6 +1149,9 @@ body:has([data-hero="b1"]) .nav:not(.scrolled) .burger span{background:rgba(236,
 .b1-p75{--rot:-1deg;width:50%;left:18%;top:6%;z-index:2;}
 /* 86" — найбільша, найдальша, справа */
 .b1-p86{--rot:1deg;width:64%;right:-2%;top:0%;z-index:1;}
+/* top-fade: верхній беззель передніх панелей зникає в фон замість чорної смуги */
+.b1-p65 img{-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 20%,#000 78%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 20%,#000 78%,transparent 100%);}
+.b1-p75 img{-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 11%,#000 78%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 11%,#000 78%,transparent 100%);}
 
 /* ---- розмірне поле кресленика — над тріо, дзеркалить buildplate знизу ---- */
 .b1-dimrail{position:absolute;top:-10px;left:0;right:0;height:0;z-index:6;pointer-events:none;}
@@ -1305,12 +1358,13 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .stat .n{font-size:clamp(33px,10.5vw,44px);}
   .stat .l{margin-top:8px;}
 
-  /* ---- CASE tabs → clean full-width stacked menu ---- */
-  .case-tabs{flex-direction:column;gap:8px;margin-top:28px;}
+  /* ---- CASE tabs → 2×2 grid ---- */
+  .case-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:28px;}
   .case-tab{width:100%;justify-content:flex-start;}
   .case-body{padding:28px 22px;}
   .case-body h3{font-size:25px;}
   .case-body .how{font-size:14.5px;}
+  .case-body .where{align-items:flex-start;}
   .adv .stat-n{font-size:23px;min-width:62px;}
   .case-cta{padding:26px 22px;}
 
@@ -1320,14 +1374,56 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .made .lede{font-size:16px;}
 
   /* ---- FEATURES ---- */
-  .feat{padding:22px 0;column-gap:16px;grid-template-columns:64px 1fr;}
-  .feat .fmark{font-size:30px;}
+  .feat-grid{gap:0 10px;}
+  .feat{padding:18px 0;column-gap:10px;grid-template-columns:52px 1fr;}
+  .feat .fmark{font-size:26px;}
+  .feat .fmark .u{font-size:8.5px;}
+  .feat h4{font-size:14px;}
+  .feat .spec{font-size:10px;}
+  .feat p{font-size:12.5px;}
 
   /* ---- SOFTWARE ---- */
   .sw-grid{gap:30px;}
   .sw-cap p{font-size:14px;}
 
   /* ---- MODELS / ACCESSORIES ---- */
+  .model-dots{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+    margin-top:36px;
+    margin-bottom:4px;
+  }
+  .mdot{
+    width:7px;height:7px;
+    border-radius:99px;
+    background:var(--line);
+    transition:width .28s cubic-bezier(.4,0,.2,1),background .28s;
+    flex-shrink:0;
+  }
+  .mdot.active{
+    width:24px;
+    background:var(--signal);
+  }
+  .model-grid{
+    display:flex;
+    max-width:none;
+    margin-left:-18px;margin-right:-18px;
+    padding:8px 18px 28px;
+    gap:14px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-padding-left:18px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .model-grid::-webkit-scrollbar{display:none;}
+  .model{
+    flex:0 0 82vw;
+    scroll-snap-align:start;
+    border-radius:18px;
+  }
   .model .body{padding:22px 20px 24px;}
   .acc{padding:22px 20px;}
 
@@ -1342,6 +1438,32 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .footer{padding:54px 0 calc(28px + env(safe-area-inset-bottom));}
   .footer-top{gap:30px;}
   .f-plate{font-size:9.5px;letter-spacing:.1em;word-break:break-word;}
+
+  /* ============ CONSILIUM mobile pass · 2026-06-23 ============ */
+
+  /* D7 · primary controls into the 48px comfort zone (Apple HIG / Material 3) */
+  .btn{min-height:48px;}
+  .btn-sm{min-height:44px;}
+  .model .price .btn-sm{min-height:48px;padding-block:13px;}
+  .field input{min-height:48px;}
+  .field textarea{min-height:96px;}
+
+  /* D8 · drawer links drop into the bottom thumb zone + clear the home indicator */
+  .drawer .sheet{justify-content:flex-end;padding-bottom:calc(28px + env(safe-area-inset-bottom));}
+
+  /* D14 · comfortable footer link hit-areas (links only — paragraphs keep their rhythm).
+     display:flex (not inline-flex) keeps each link a stacked full-width row, not an inline run. */
+  .footer .fcol a{display:flex;align-items:center;min-height:44px;padding:6px 0;margin:0 0 2px;}
+
+  /* D3 · visible keyboard focus ring (WCAG 2.2 · SC 2.4.13). Cascade-last so it
+     beats .field input:focus{outline:none}. Dark ring on light surfaces; gold ring
+     reserved for the dark blocks only (keeps gold out of the light sections). */
+  a:focus-visible,button:focus-visible,.btn:focus-visible,.case-tab:focus-visible,
+  #burger:focus-visible,.field input:focus-visible,.field textarea:focus-visible{
+    outline:3px solid var(--accent-deep);outline-offset:2px;border-radius:4px;}
+  .b1-cta .btn:focus-visible,.case-cta .btn:focus-visible,.m-cta:focus-visible,
+  .footer .fcol a:focus-visible,.contact .contact-cards a:focus-visible{
+    outline-color:var(--signal);}
 }
 
 @media(max-width:480px){
