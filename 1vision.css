@@ -462,14 +462,14 @@ body{counter-reset:secno;}
     radial-gradient(1px 1px at 55% 7%,rgba(255,255,255,.75) 0%,transparent 100%),
     linear-gradient(160deg,#0A0A0A 0%,#111111 100%);}
 .model .vis .ph-stripe{background-image:none;}
-.model:nth-child(2) .vis{background:
+.model:nth-child(2) .vis{aspect-ratio:4/3;background:
     radial-gradient(1px 1px at 14% 9%,rgba(255,255,255,.85) 0%,transparent 100%),
     radial-gradient(1.4px 1.4px at 88% 78%,rgba(255,255,255,.9) 0%,transparent 100%),
     radial-gradient(.8px .8px at 62% 18%,rgba(255,255,255,.65) 0%,transparent 100%),
     radial-gradient(1px 1px at 7% 85%,rgba(255,255,255,.75) 0%,transparent 100%),
     radial-gradient(.8px .8px at 94% 35%,rgba(255,255,255,.6) 0%,transparent 100%),
     linear-gradient(160deg,#0A0A0A 0%,#111111 100%);}
-.model.flagship .vis{background:
+.model.flagship .vis{aspect-ratio:4/3;background:
     radial-gradient(1.3px 1.3px at 22% 82%,rgba(255,255,255,.9) 0%,transparent 100%),
     radial-gradient(.8px .8px at 83% 11%,rgba(255,255,255,.7) 0%,transparent 100%),
     radial-gradient(1px 1px at 47% 91%,rgba(255,255,255,.75) 0%,transparent 100%),
