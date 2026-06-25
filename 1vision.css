@@ -134,8 +134,8 @@ body{counter-reset:secno;}
 @keyframes navSheen{0%,68%{left:-45%}100%{left:125%}}
 @media(prefers-reduced-motion:reduce){.nav.scrolled .nav-inner::after{animation:none;opacity:0;}}
 .brand{display:flex;align-items:center;gap:12px;}
-.brand .logo{height:26px;width:auto;}
-.brand .logo-1v{height:22px;}
+.brand .logo{height:32px;width:auto;}
+.brand .logo-1v{height:27px;}
 .brand .vline{width:1px;height:26px;background:var(--line);}
 .brand .pname{font-family:"Sora",sans-serif;font-weight:700;font-size:18px;
   color:var(--accent);line-height:1;letter-spacing:-.02em;}
@@ -375,8 +375,9 @@ body{counter-reset:secno;}
   border-bottom:1px solid rgba(214,184,132,.12);}
 .mock .topbar .d{width:10px;height:10px;border-radius:50%;}
 .mock .topbar .t{margin-left:10px;font-family:"JetBrains Mono",monospace;font-size:11px;color:#DCB87E;}
-.mock .board{aspect-ratio:16/10;position:relative;
-  background:radial-gradient(100% 100% at 30% 10%,#251C12,#1A130B);}
+.mock .board{aspect-ratio:16/10;position:relative;overflow:hidden;
+  background:#000;}
+.mock .board .board-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
 .ph-stripe{position:absolute;inset:0;
   background-image:repeating-linear-gradient(135deg,rgba(214,184,132,.05) 0 12px,transparent 12px 24px);}
 .mock .toolrail{position:absolute;left:14px;top:50%;transform:translateY(-50%);
@@ -452,13 +453,92 @@ body{counter-reset:secno;}
   box-shadow:var(--shadow-card);display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s;}
 .model:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);}
 .model.flagship{border:1.5px solid var(--accent);box-shadow:0 30px 60px -28px color-mix(in srgb,var(--accent) 45%,transparent);}
-.model .vis{position:relative;aspect-ratio:4/3;
-  background:radial-gradient(110% 100% at 60% 30%,#F1ECDC,#E4D8BD);display:flex;align-items:center;justify-content:center;}
-.model .vis .ph-stripe{background-image:repeating-linear-gradient(135deg,rgba(150,120,58,.05) 0 12px,transparent 12px 24px);}
-.model .vis .panel-ic{width:90px;height:64px;border-radius:8px;border:2.5px solid var(--cobalt);
-  position:relative;background:linear-gradient(160deg,#2A2014,#1E1712);}
-.model .vis .panel-ic::after{content:"";position:absolute;left:50%;bottom:-9px;transform:translateX(-50%);
-  width:30px;height:6px;border-radius:0 0 4px 4px;background:var(--cobalt);}
+.model .vis{position:relative;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;
+  background:
+    /* зірки — різні розміри та яскравості для відчуття глибини */
+    radial-gradient(1px 1px at 7% 12%,rgba(255,255,255,.92) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 19% 7%,rgba(255,255,255,.6) 0%,transparent 100%),
+    radial-gradient(1.3px 1.3px at 34% 19%,rgba(255,255,255,.88) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 51% 5%,rgba(255,255,255,.55) 0%,transparent 100%),
+    radial-gradient(1px 1px at 67% 14%,rgba(255,255,255,.75) 0%,transparent 100%),
+    radial-gradient(1.6px 1.6px at 82% 8%,rgba(255,255,255,.97) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 93% 23%,rgba(255,255,255,.62) 0%,transparent 100%),
+    radial-gradient(1px 1px at 97% 42%,rgba(255,255,255,.8) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 3% 38%,rgba(255,255,255,.68) 0%,transparent 100%),
+    radial-gradient(1.2px 1.2px at 98% 59%,rgba(255,255,255,.78) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 2% 66%,rgba(255,255,255,.62) 0%,transparent 100%),
+    radial-gradient(1px 1px at 97% 75%,rgba(255,255,255,.82) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 4% 83%,rgba(255,255,255,.58) 0%,transparent 100%),
+    radial-gradient(1.3px 1.3px at 14% 92%,rgba(255,255,255,.88) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 28% 95%,rgba(255,255,255,.52) 0%,transparent 100%),
+    radial-gradient(1px 1px at 46% 97%,rgba(255,255,255,.72) 0%,transparent 100%),
+    radial-gradient(1.6px 1.6px at 63% 93%,rgba(255,255,255,.94) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 77% 89%,rgba(255,255,255,.62) 0%,transparent 100%),
+    radial-gradient(1px 1px at 89% 94%,rgba(255,255,255,.76) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 95% 87%,rgba(255,255,255,.58) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 41% 32%,rgba(255,255,255,.48) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 59% 54%,rgba(255,255,255,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 24% 61%,rgba(255,255,255,.52) 0%,transparent 100%),
+    /* блакитні гіганти */
+    radial-gradient(2px 2px at 76% 35%,rgba(160,200,255,.95) 0%,transparent 100%),
+    radial-gradient(1.8px 1.8px at 11% 45%,rgba(180,215,255,.85) 0%,transparent 100%),
+    radial-gradient(2px 2px at 88% 68%,rgba(155,195,255,.9) 0%,transparent 100%),
+    linear-gradient(160deg,#05080F 0%,#080C18 55%,#0A0F1E 100%);}
+.model .vis .ph-stripe{background-image:none;}
+/* картка 2 — своє небо */
+.model:nth-child(2) .vis{background:
+    radial-gradient(1px 1px at 5% 22%,rgba(255,255,255,.88) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 18% 11%,rgba(255,255,255,.58) 0%,transparent 100%),
+    radial-gradient(1.2px 1.2px at 29% 31%,rgba(255,255,255,.82) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 44% 9%,rgba(255,255,255,.52) 0%,transparent 100%),
+    radial-gradient(1px 1px at 59% 24%,rgba(255,255,255,.72) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 74% 14%,rgba(255,255,255,.94) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 88% 5%,rgba(255,255,255,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 95% 32%,rgba(255,255,255,.78) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 2% 52%,rgba(255,255,255,.65) 0%,transparent 100%),
+    radial-gradient(1.1px 1.1px at 97% 45%,rgba(255,255,255,.82) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 3% 70%,rgba(255,255,255,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 98% 63%,rgba(255,255,255,.75) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 6% 87%,rgba(255,255,255,.55) 0%,transparent 100%),
+    radial-gradient(1.3px 1.3px at 12% 96%,rgba(255,255,255,.86) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 36% 89%,rgba(255,255,255,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 53% 94%,rgba(255,255,255,.7) 0%,transparent 100%),
+    radial-gradient(1.6px 1.6px at 69% 97%,rgba(255,255,255,.92) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 84% 90%,rgba(255,255,255,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 81%,rgba(255,255,255,.76) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 57% 39%,rgba(255,255,255,.44) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 22% 77%,rgba(255,255,255,.5) 0%,transparent 100%),
+    radial-gradient(2px 2px at 84% 27%,rgba(160,200,255,.95) 0%,transparent 100%),
+    radial-gradient(1.8px 1.8px at 7% 58%,rgba(180,215,255,.82) 0%,transparent 100%),
+    linear-gradient(200deg,#060910 0%,#080C16 55%,#0A0E1C 100%);}
+/* картка 3 (flagship) — своє небо */
+.model.flagship .vis{background:
+    radial-gradient(1.1px 1.1px at 12% 9%,rgba(255,255,255,.90) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 27% 18%,rgba(255,255,255,.62) 0%,transparent 100%),
+    radial-gradient(1.4px 1.4px at 43% 6%,rgba(255,255,255,.85) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 58% 20%,rgba(255,255,255,.55) 0%,transparent 100%),
+    radial-gradient(1px 1px at 73% 8%,rgba(255,255,255,.78) 0%,transparent 100%),
+    radial-gradient(1.6px 1.6px at 87% 22%,rgba(255,255,255,.96) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 94% 11%,rgba(255,255,255,.58) 0%,transparent 100%),
+    radial-gradient(1px 1px at 97% 37%,rgba(255,255,255,.82) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 1% 33%,rgba(255,255,255,.68) 0%,transparent 100%),
+    radial-gradient(1.2px 1.2px at 96% 55%,rgba(255,255,255,.80) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 2% 62%,rgba(255,255,255,.62) 0%,transparent 100%),
+    radial-gradient(1px 1px at 98% 72%,rgba(255,255,255,.78) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 4% 80%,rgba(255,255,255,.58) 0%,transparent 100%),
+    radial-gradient(1.3px 1.3px at 18% 93%,rgba(255,255,255,.87) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 33% 96%,rgba(255,255,255,.52) 0%,transparent 100%),
+    radial-gradient(1px 1px at 50% 91%,rgba(255,255,255,.73) 0%,transparent 100%),
+    radial-gradient(1.6px 1.6px at 67% 98%,rgba(255,255,255,.93) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 80% 87%,rgba(255,255,255,.63) 0%,transparent 100%),
+    radial-gradient(1px 1px at 91% 94%,rgba(255,255,255,.77) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 35% 44%,rgba(255,255,255,.46) 0%,transparent 100%),
+    radial-gradient(.7px .7px at 61% 58%,rgba(255,255,255,.42) 0%,transparent 100%),
+    radial-gradient(2px 2px at 68% 32%,rgba(160,200,255,.97) 0%,transparent 100%),
+    radial-gradient(1.8px 1.8px at 15% 47%,rgba(180,215,255,.85) 0%,transparent 100%),
+    radial-gradient(2px 2px at 90% 74%,rgba(155,195,255,.88) 0%,transparent 100%),
+    linear-gradient(140deg,#050810 0%,#080B15 55%,#0A0E1B 100%);}
+.model .vis .panel-img{width:86%;object-fit:contain;display:block;filter:drop-shadow(0 14px 40px rgba(0,10,40,.9)) drop-shadow(0 4px 12px rgba(0,20,80,.6));}
 .model .vis .tag{position:absolute;top:14px;left:14px;font-family:"JetBrains Mono",monospace;
   font-size:11px;background:rgba(26,19,11,.8);color:#fff;padding:5px 10px;border-radius:7px;}
 .model .vis .flagtag{position:absolute;top:14px;right:14px;font-size:11px;font-weight:700;
