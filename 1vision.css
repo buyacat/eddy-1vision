@@ -82,7 +82,7 @@ img{display:block;max-width:100%;}
 .nav-links a:active,.drawer .sheet a:active,.footer .fcol a:active{transform:translateY(1px);}
 
 /* ---------- section heads ---------- */
-.sec{padding:104px 0;position:relative;}
+.sec{padding:80px 0;position:relative;}
 body{counter-reset:secno;}
 .sec-head{display:grid;grid-template-columns:62px 1fr;column-gap:24px;max-width:920px;
   border-top:1.5px solid var(--ink);padding-top:24px;counter-increment:secno;}
@@ -400,7 +400,7 @@ body{counter-reset:secno;}
 /* ============================================================
    USE CASES
    ============================================================ */
-.cases{background:linear-gradient(180deg,var(--sky-3) 0%,var(--sky) 100%);padding-bottom:52px;}
+.cases{background:linear-gradient(180deg,var(--sky-3) 0%,var(--sky) 100%);}
 .case-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-top:40px;}
 .case-tab{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:9px;
   background:#fff;border:1px solid var(--line);cursor:pointer;font-weight:600;font-size:14.5px;
@@ -446,7 +446,7 @@ body{counter-reset:secno;}
 /* ============================================================
    MODELS + ACCESSORIES
    ============================================================ */
-.models{background:linear-gradient(180deg,var(--sky) 0%,#fff 50%);padding-top:52px;}
+.models{background:linear-gradient(180deg,var(--sky) 0%,#fff 50%);}
 .model-dots{display:none;}
 .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px;}
 .model{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;
