@@ -27,11 +27,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install, build, and upload your site
-        uses: withastro/action@v3
+        uses: withastro/action@v6
+        with:
+          node-version: 24
         # За замовчуванням action шукає проєкт у корені репозиторію.
         # Якщо Astro-проєкт лежить не в корені (наприклад, у підпапці),
-        # розкоментуйте і вкажіть шлях:
-        # with:
+        # додайте ще один рядок під 'with:':
         #   path: .
 
   deploy:
