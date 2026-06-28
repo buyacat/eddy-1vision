@@ -1,0 +1,74 @@
+---
+import site from '../content/site.json';
+import { asset } from '../lib/asset.js';
+const { hero } = site;
+---
+<section class="hero hero-b1" id="top" data-hero="b1" data-screen-label="Hero">
+
+  <div class="b1-bg"><div class="bgmove"></div></div>
+  <div class="b1-vig"></div>
+
+  <span class="b1-cm tl"></span><span class="b1-cm tr"></span>
+  <span class="b1-cm bl"></span><span class="b1-cm br"></span>
+  <div class="b1-frame"></div>
+
+  <!-- top rail -->
+  <div class="b1-rail">
+    {hero.rail.map((seg) => <span class="b1-seg">{seg}</span>)}
+  </div>
+
+  <!-- center stage: copy | trio panels -->
+  <div class="b1-stage">
+    <div class="bType">
+      <div class="ua-sticker"><img src={asset("assets/made-in-ua.png")} alt="Зроблено в Україні" /></div>
+      <h1 class="b1-h1">
+        <span class="b1-row b1-small">{hero.titleLines[0]}</span>
+        <span class="b1-row">{hero.titleLines[1]}</span>
+        <span class="b1-row b1-big">{hero.titleLines[2]}</span>
+      </h1>
+      <p class="b1-sub">{hero.subtitle}</p>
+      <div class="b1-segs">
+        <span class="b1-segs-lbl">Сфери</span>
+        {hero.segments.map((s) => <span class="b1-seg-pill"><i></i>{s}</span>)}
+      </div>
+      <div class="b1-cta">
+        <a class="btn btn-gold" href={hero.ctaPrimary.href}>{hero.ctaPrimary.label} <span class="b1-ar">→</span></a>
+        <a class="btn btn-line" href={hero.ctaSecondary.href}>{hero.ctaSecondary.label}</a>
+      </div>
+    </div>
+
+    <!-- Trio (layouts A / B / C) -->
+    <div class="b1-trio">
+      <div class="b1-dimrail" aria-hidden="true">
+        <span class="b1-dim b1-dim65"><b>{hero.diagonals[0]}</b></span>
+        <span class="b1-dim b1-dim75"><b>{hero.diagonals[1]}</b></span>
+        <span class="b1-dim b1-dim86"><b>{hero.diagonals[2]}</b></span>
+      </div>
+      <div class="b1-trio-halo"></div>
+      <div class="b1-beam" aria-hidden="true"></div>
+      <div class="b1-p b1-p86"><img src={asset("assets/panel-festival.webp")} alt="Панель 1-Vision 86″ — інтерактивна мапа фестивалю на екрані" decoding="async" fetchpriority="high" /></div>
+      <div class="b1-p b1-p75"><img src={asset("assets/panel-tactical.webp")} alt="Панель 1-Vision 75″ — оперативна мапа регіону на екрані" decoding="async" /></div>
+      <div class="b1-p b1-p65"><img src={asset("assets/panel-satellite.webp")} alt="Панель 1-Vision 65″ — освітній тест про супутниковий зв'язок на екрані" decoding="async" /></div>
+      <div class="b1-sweep" aria-hidden="true"></div>
+    </div>
+
+    <!-- Nest (layout D) -->
+    <div class="b1-trio-nest">
+      <div class="b1-nest b1-n1"><img src={asset("assets/1vision-3q.png")} alt="1-Vision" />
+        <div class="b1-nest"><img src={asset("assets/1vision-3q.png")} alt="" />
+          <div class="b1-nest"><img src={asset("assets/1vision-3q.png")} alt="" /></div>
+        </div>
+      </div>
+      <span class="b1-badge b1-badge-abs">∞</span>
+    </div>
+  </div>
+
+  <!-- bottom plate -->
+  <div class="b1-tblock">
+    <div class="b1-tc name">{hero.plate.name}</div>
+    <div class="b1-tc">{hero.plate.serial}</div>
+    <div class="b1-tc">{hero.plate.qc}</div>
+    <div class="b1-tc pass"><span class="dot"></span> {hero.plate.status}</div>
+  </div>
+
+</section>

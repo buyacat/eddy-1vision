@@ -1,0 +1,37 @@
+---
+import stats from '../content/stats.json';
+---
+<section class="sec stats" id="stats" data-screen-label="Статистика">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">{stats.eyebrow}</span>
+      <h2>{stats.titlePlain}<span class="hl">{stats.titleHighlight}</span></h2>
+    </div>
+
+    <div class="stat-grid reveal stagger" style="margin-top:46px">
+      {stats.stats.map((s) => (
+        <div class="stat">
+          <div class="n">
+            <span data-count={s.count} data-dec={s.decimals ?? undefined}>0</span>
+            <span class="suf">{s.suffix}</span>
+          </div>
+          <div class="l">{s.label}</div>
+        </div>
+      ))}
+    </div>
+
+    <div class="monument reveal">
+      <div class="mono-figure">
+        <div class="big"><span class="lit">1</span><span class="sep"> /</span><span class="of3">3</span></div>
+      </div>
+      <div class="mono-copy">
+        <h3>{stats.monument.title}</h3>
+        <p>{stats.monument.text}</p>
+        <span class="prozorro"><span class="vd"></span>{stats.monument.badge}</span>
+      </div>
+      <div class="monument-right">
+        <div class="cells"><span class="cell on"></span><span class="cell"></span><span class="cell"></span></div>
+      </div>
+    </div>
+  </div>
+</section>

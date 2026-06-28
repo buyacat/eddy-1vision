@@ -1,0 +1,38 @@
+[
+  {
+    "name": "1-Vision",
+    "subtitle": "Базова конфігурація · Україна",
+    "flagship": false,
+    "specs": [
+      { "key": "Оперативна пам'ять", "value": "8 ГБ" },
+      { "key": "Накопичувач", "value": "128 ГБ" },
+      { "key": "ОС", "value": "Android 14" }
+    ],
+    "priceLabel": "Ціна за запитом",
+    "priceAmount": ""
+  },
+  {
+    "name": "1-Vision Pro",
+    "subtitle": "Розширена конфігурація · Україна",
+    "flagship": false,
+    "specs": [
+      { "key": "Оперативна пам'ять", "value": "8 ГБ" },
+      { "key": "Накопичувач", "value": "128 ГБ" },
+      { "key": "ОС", "value": "Android 14" }
+    ],
+    "priceLabel": "Ціна за запитом",
+    "priceAmount": ""
+  },
+  {
+    "name": "1-Vision Pro Max",
+    "subtitle": "Максимальна продуктивність · Україна",
+    "flagship": true,
+    "specs": [
+      { "key": "Оперативна пам'ять", "value": "16 ГБ" },
+      { "key": "Накопичувач", "value": "256 ГБ" },
+      { "key": "ОС", "value": "Android 14" }
+    ],
+    "priceLabel": "Комплект 86\" + ПК + стійка, від",
+    "priceAmount": "204&nbsp;012 ₴"
+  }
+]

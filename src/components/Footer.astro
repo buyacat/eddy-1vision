@@ -1,0 +1,44 @@
+---
+import site from '../content/site.json';
+import { asset } from '../lib/asset.js';
+const { footer, contacts } = site;
+---
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="f-brand">
+        <img class="logo" src={asset("assets/eddy-white.svg")} alt="Eddy Group" />
+        <p>{footer.description}</p>
+        <div class="f-badges">
+          <img src={asset("assets/made-in-ua.png")} alt="Зроблено в Україні" loading="lazy" decoding="async" width="120" height="34" />
+          <img src={asset("assets/eu-funded.png")} alt="Funded by the EU · Ukraine Facility" loading="lazy" decoding="async" width="120" height="34" />
+        </div>
+      </div>
+      {footer.columns.map((col) => (
+        <div class="fcol">
+          <h4>{col.title}</h4>
+          {col.links.map((l) => (
+            <a href={l.href} target={l.external ? '_blank' : undefined} rel={l.external ? 'noreferrer' : undefined}>{l.label}</a>
+          ))}
+          {col.note && <p>{col.note}</p>}
+        </div>
+      ))}
+      <div class="fcol">
+        <h4>Контакти</h4>
+        <a href={contacts.phoneHref}>{contacts.phone}</a>
+        <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
+        <p>{contacts.address}</p>
+      </div>
+    </div>
+    <div class="buildplate etched f-plate">{footer.buildplate}</div>
+    <div class="footer-bottom">
+      <div class="cp">{footer.copyright}</div>
+      <div class="made-tag"><span class="flag"></span> {footer.madeTag}</div>
+    </div>
+  </div>
+</footer>
+
+<!-- sticky mobile CTA (з'являється після хіро, ховається на формі) -->
+<a class="m-cta" href="#contact" aria-label={`${site.mobileCta} 1-Vision`}>
+  <span>{site.mobileCta}</span><span class="m-cta-ar" aria-hidden="true">→</span>
+</a>

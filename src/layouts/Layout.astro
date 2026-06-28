@@ -1,0 +1,104 @@
+---
+import '../styles/1vision.css';
+import site from '../content/site.json';
+import { asset } from '../lib/asset.js';
+
+const { seo } = site;
+---
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<title>{seo.title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+<meta name="description" content={seo.description} />
+<meta name="keywords" content={seo.keywords} />
+<meta name="author" content="Eddy Group" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#F4F1EA" />
+<link rel="canonical" href={seo.canonical} />
+<link rel="icon" type="image/svg+xml" href={asset('assets/eddy-black.svg')} />
+<link rel="apple-touch-icon" href={asset('assets/eddy-black.svg')} />
+<link rel="preload" as="image" href={asset('assets/panel-festival.webp')} fetchpriority="high" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Eddy Group" />
+<meta property="og:title" content={seo.ogTitle} />
+<meta property="og:description" content={seo.ogDescription} />
+<meta property="og:url" content={seo.canonical} />
+<meta property="og:locale" content="uk_UA" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={seo.ogTitle} />
+<meta name="twitter:description" content={seo.ogDescription} />
+
+<!-- Structured data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://eddygroup.eu/#organization",
+      "name": "Eddy Group",
+      "url": "https://eddygroup.eu",
+      "logo": "https://buyacat.github.io/eddy-1vision/assets/eddy-black.svg",
+      "email": site.contacts.email,
+      "telephone": "+380932708204",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Глибочицька, 32",
+        "addressLocality": "Київ",
+        "addressCountry": "UA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+380932708204",
+        "email": site.contacts.email,
+        "contactType": "sales",
+        "areaServed": "UA",
+        "availableLanguage": ["uk"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://buyacat.github.io/eddy-1vision/#website",
+      "url": "https://buyacat.github.io/eddy-1vision/",
+      "name": "Інтерактивні панелі 1-Vision",
+      "inLanguage": "uk",
+      "publisher": { "@id": "https://eddygroup.eu/#organization" }
+    },
+    {
+      "@type": "Product",
+      "name": "Інтерактивна панель 1-Vision",
+      "image": "https://buyacat.github.io/eddy-1vision/assets/eddy-black.svg",
+      "description": "Українська інтерактивна сенсорна панель 1-Vision: діагоналі 65″, 75″, 86″, 4K UHD, 50 точок дотику, Android 14, слот OPS, власне ПЗ. Виробництво на базі «Київприлад».",
+      "brand": { "@type": "Brand", "name": "1-Vision" },
+      "manufacturer": { "@id": "https://eddygroup.eu/#organization" },
+      "category": "Інтерактивні панелі",
+      "countryOfOrigin": "UA",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "UAH",
+        "price": "204012",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": { "@id": "https://eddygroup.eu/#organization" },
+        "description": "Комплект 1-Vision Pro Max 86″ + ПК + стійка (орієнтовна стартова вартість)"
+      }
+    }
+  ]
+})} />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <slot />
+  <script src={asset('app.js')} is:inline></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Stats from '../components/Stats.astro';
+import Features from '../components/Features.astro';
+import Made from '../components/Made.astro';
+import Software from '../components/Software.astro';
+import Cases from '../components/Cases.astro';
+import Models from '../components/Models.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout>
+  <Nav />
+
+  <!-- instrument faceplate: corner registration crosshairs -->
+  <div class="faceplate" aria-hidden="true">
+    <span class="cx tl"></span><span class="cx tr"></span><span class="cx bl"></span><span class="cx br"></span>
+  </div>
+
+  <main id="main">
+    <Hero />
+    <Stats />
+    <Features />
+    <Made />
+    <Software />
+    <Cases />
+    <Models />
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>

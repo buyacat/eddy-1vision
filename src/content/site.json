@@ -1,0 +1,87 @@
+{
+  "seo": {
+    "title": "Інтерактивні панелі 1-Vision — Eddy Group, Україна",
+    "description": "Українські інтерактивні панелі 1-Vision — 65″/75″/86″, 4K UHD, 50 точок дотику, власне ПЗ і виробництво. Для шкіл і бізнесу. Демонстрація за запитом.",
+    "keywords": "інтерактивні панелі, інтерактивна панель, сенсорний дисплей, інтерактивна дошка, панель для школи, 1-Vision, Eddy Group, інтерактивна панель ціна, Нова українська школа",
+    "ogTitle": "Інтерактивні панелі 1-Vision — Eddy Group",
+    "ogDescription": "Українські інтерактивні панелі 1-Vision: 4K UHD, 50 точок дотику, власне ПЗ і виробництво. Для шкіл, бізнесу та публічних просторів.",
+    "canonical": "https://buyacat.github.io/eddy-1vision/"
+  },
+  "contacts": {
+    "phone": "+380 93 270 82 04",
+    "phoneHref": "tel:+380932708204",
+    "email": "office@eddygroup.eu",
+    "address": "Київ, вул. Глибочицька, 32",
+    "site": "eddygroup.eu",
+    "siteHref": "https://eddygroup.eu"
+  },
+  "nav": {
+    "links": [
+      { "label": "Моделі", "href": "#models" },
+      { "label": "Eddy Trade", "href": "https://eddytrade.com.ua", "external": true },
+      { "label": "Новини", "href": "#news" },
+      { "label": "Контакти", "href": "#contact" }
+    ],
+    "ctaLabel": "Залишити заявку"
+  },
+  "hero": {
+    "rail": ["ЛІНІЯ 01 · ВТК · UA", "МАРКА 1-VISION · ПАРТІЯ 2026"],
+    "titleLines": ["Інтерактивні панелі", "Виробництво", "1-Vision"],
+    "subtitle": "Повний цикл — від матриці до пакування — на власному майданчику аерокосмічного приладобудування. Без посередників.",
+    "segments": ["Освіта", "Бізнес", "Оборона"],
+    "ctaPrimary": { "label": "Замовити демонстрацію", "href": "#contact" },
+    "ctaSecondary": { "label": "Екскурсія виробництвом", "href": "#made" },
+    "plate": {
+      "name": "1-VISION",
+      "serial": "СЕР.№ 1V-0001 · 86″ 4K UHD",
+      "qc": "ВТК · UA",
+      "status": "PASS"
+    },
+    "diagonals": ["65″", "75″", "86″"]
+  },
+  "compliance": "<b>Відповідає вимогам</b> програми «Нова українська школа» та Ukraine Facility.",
+  "contactSection": {
+    "eyebrow": "Готові до співпраці",
+    "title": "Залиште заявку на 1-Vision",
+    "lede": "Наш менеджер допоможе підібрати діагональ, комплектацію та аксесуари під ваші задачі, проведе демонстрацію або підготує комерційну пропозицію для тендеру."
+  },
+  "form": {
+    "web3formsAccessKey": "REPLACE_WITH_WEB3FORMS_ACCESS_KEY",
+    "subject": "Нова заявка з сайту 1-Vision",
+    "fromName": "1-Vision Landing",
+    "title": "Заявка на 1-Vision",
+    "subtitle": "Підберемо діагональ, комплектацію та проведемо демонстрацію.",
+    "submitLabel": "Надіслати заявку на 1-Vision",
+    "errorText": "Не вдалося надіслати. Спробуйте ще раз або зателефонуйте",
+    "footnote": "Відповідаємо протягом одного робочого дня",
+    "successTitle": "Дякуємо!",
+    "successText": "Заявку отримано. Менеджер зв'яжеться з вами протягом робочого дня."
+  },
+  "footer": {
+    "description": "Інтерактивні панелі 1-Vision. Власне програмне забезпечення, виробництво, сервіс і підтримка в Україні.",
+    "columns": [
+      {
+        "title": "Продукт",
+        "links": [
+          { "label": "Технології", "href": "#features" },
+          { "label": "Софт для шкіл", "href": "#software" },
+          { "label": "Моделі та ціни", "href": "#models" },
+          { "label": "Застосування", "href": "#cases" }
+        ]
+      },
+      {
+        "title": "Компанія",
+        "links": [
+          { "label": "Виробництво", "href": "#made" },
+          { "label": "eddygroup.eu", "href": "https://eddygroup.eu", "external": true },
+          { "label": "Контакти", "href": "#contact" }
+        ],
+        "note": "Prozorro Market"
+      }
+    ],
+    "buildplate": "1-VISION · UA · СЕР. №1V-____ · ──┤ 65″ / 75″ / 86″ ├──",
+    "copyright": "© 2026 Eddy Group · Інтерактивні панелі 1-Vision",
+    "madeTag": "Зроблено в Україні"
+  },
+  "mobileCta": "Замовити демонстрацію"
+}

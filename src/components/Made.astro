@@ -1,0 +1,27 @@
+---
+import made from '../content/made.json';
+import { asset } from '../lib/asset.js';
+---
+<section class="sec made grid-zone" id="made" data-screen-label="Виробництво">
+  <div class="ua-stripe"></div>
+  <div class="wrap">
+    <div class="made-grid">
+      <div class="made-copy reveal">
+        <span class="eyebrow light">{made.eyebrow}</span>
+        <h2 set:html={made.title} />
+        <p class="lede">{made.lede}</p>
+        <div class="made-points">
+          {made.points.map((p) => (
+            <div class="mp"><div class="ic"></div><div><h4>{p.title}</h4><p>{p.text}</p></div></div>
+          ))}
+        </div>
+      </div>
+      <div class="made-vis reveal">
+        <div class="made-photo">
+          <img src={asset(`assets/${made.photo.src}`)} alt={made.photo.alt} loading="lazy" decoding="async" width={made.photo.width} height={made.photo.height} />
+        </div>
+        <div class="made-badge"><span class="flag"></span><div><b>{made.badge.title}</b><span>{made.badge.text}</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>

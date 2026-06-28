@@ -1,0 +1,29 @@
+---
+import features from '../content/features.json';
+import site from '../content/site.json';
+---
+<section class="sec features grid-zone" id="features" data-screen-label="Технології">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Технологічні переваги</span>
+      <h2>Все необхідне — <span class="hl">всередині панелі</span></h2>
+      <p>Професійна матриця, точний сенсор, захисне скло та продуктивна платформа Android з можливістю встановити повноцінний ПК.</p>
+    </div>
+
+    <div class="feat-grid reveal stagger">
+      {features.map((f) => (
+        <div class="feat">
+          <div class={`fmark${f.small ? ' fmark--sm' : ''}`}>{f.mark}<span class="u">{f.markUnit}</span></div>
+          <h4>{f.title}</h4>
+          <div class="spec">{f.spec}</div>
+          <p>{f.text}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="compliance reveal">
+      <div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <span set:html={site.compliance} />
+    </div>
+  </div>
+</section>

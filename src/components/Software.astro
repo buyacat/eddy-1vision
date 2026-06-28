@@ -1,0 +1,33 @@
+---
+import software from '../content/software.json';
+import { asset } from '../lib/asset.js';
+---
+<section class="sec software" id="software" data-screen-label="Софт">
+  <div class="wrap">
+    <div class="sw-grid">
+      <div class="sw-copy reveal">
+        <span class="eyebrow">{software.eyebrow}</span>
+        <h2>{software.titlePlain}<span class="hl">{software.titleHighlight}</span></h2>
+        <p>{software.text}</p>
+        <div class="sw-caps">
+          {software.capabilities.map((c) => (
+            <div class="sw-cap">
+              <div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <p><b>{c.bold}</b> {c.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="sw-mock reveal">
+        <div class="mock">
+          <div class="topbar"><span class="d" style="background:#FF5F57"></span><span class="d" style="background:#FEBC2E"></span><span class="d" style="background:#28C840"></span><span class="t">{software.mock.windowTitle}</span></div>
+          <div class="board">
+            <video class="board-video" src={asset(`assets/${software.mock.video}`)} autoplay muted loop playsinline></video>
+          </div>
+        </div>
+        <div class="sw-float sw-float-tr"><div class="k">{software.floats.topRight.label}</div><div class="v">{software.floats.topRight.value}</div></div>
+        <div class="sw-float sw-float-bl"><div class="k">{software.floats.bottomLeft.label}</div><div class="v">{software.floats.bottomLeft.value}</div></div>
+      </div>
+    </div>
+  </div>
+</section>

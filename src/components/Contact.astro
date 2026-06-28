@@ -1,0 +1,51 @@
+---
+import site from '../content/site.json';
+const { contacts, contactSection, form } = site;
+---
+<section class="sec contact" id="contact" data-screen-label="Контакти">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-copy reveal">
+        <span class="eyebrow">{contactSection.eyebrow}</span>
+        <h2>{contactSection.title}</h2>
+        <p class="lede">{contactSection.lede}</p>
+        <div class="contact-cards">
+          <div class="cc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="k">Телефон</div><a class="v" href={contacts.phoneHref}>{contacts.phone}</a></div></div>
+          <div class="cc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div><div><div class="k">Email</div><a class="v" href={`mailto:${contacts.email}`}>{contacts.email}</a></div></div>
+          <div class="cc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-7.6 8-13a8 8 0 1 0-16 0c0 5.4 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg></div><div><div class="k">Адреса</div><div class="v">{contacts.address}</div></div></div>
+          <div class="cc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg></div><div><div class="k">Сайт</div><a class="v" href={contacts.siteHref} target="_blank" rel="noreferrer">{contacts.site}</a></div></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <div class="fc-corners" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <form id="leadForm">
+          <!-- Web3Forms: встав свій access key нижче.
+               Отримати за 30 сек: web3forms.com → введи email (краще office@eddygroup.eu) → ключ прийде на пошту.
+               Редагується в src/content/site.json -> form.web3formsAccessKey -->
+          <input type="hidden" name="access_key" value={form.web3formsAccessKey}>
+          <input type="hidden" name="subject" value={form.subject}>
+          <input type="hidden" name="from_name" value={form.fromName}>
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          <h3>{form.title}</h3>
+          <div class="sub">{form.subtitle}</div>
+          <div class="field"><label>Ім'я та прізвище <span class="req">*</span></label><input type="text" name="name" required autocomplete="name" placeholder="Іван Петренко" /></div>
+          <div class="field"><label>Назва закладу / компанії</label><input type="text" name="org" autocomplete="organization" placeholder="Школа №— / ТОВ —" /></div>
+          <div class="field row">
+            <div><label>Телефон <span class="req">*</span></label><input type="tel" name="phone" required inputmode="tel" autocomplete="tel" placeholder="+380 —" /></div>
+            <div><label>Email</label><input type="email" name="email" inputmode="email" autocomplete="email" placeholder="you@mail.com" /></div>
+          </div>
+          <div class="field"><label>Коментар</label><textarea name="comment" placeholder="Напр. «Цікавить 1-Vision 75 зі стійкою»"></textarea></div>
+          <button class="btn btn-primary" type="submit">{form.submitLabel}</button>
+          <div class="form-err" id="formErr" style="display:none">{form.errorText} <a href={contacts.phoneHref}>{contacts.phone}</a>.</div>
+          <div class="form-foot"><span class="dot"></span> {form.footnote}</div>
+        </form>
+        <div class="form-ok" id="formOk">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>{form.successTitle}</h3>
+          <p>{form.successText}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

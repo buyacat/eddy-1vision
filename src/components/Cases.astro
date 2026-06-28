@@ -1,0 +1,60 @@
+---
+import cases from '../content/cases.json';
+import { asset } from '../lib/asset.js';
+---
+<section class="sec cases" id="cases" data-screen-label="Застосування">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Сфери застосування</span>
+      <h2>Одна панель — <span class="hl">різні сценарії</span></h2>
+      <p>Освіта, бізнес і публічні простори: підбираємо діагональ, ПЗ та комплектацію під ваш процес.</p>
+    </div>
+
+    <div class="case-tabs reveal" id="caseTabs" role="tablist" aria-label="Сфери застосування">
+      {cases.map((c, i) => (
+        <button
+          class={`case-tab${i === 0 ? ' active' : ''}`}
+          data-case={i}
+          role="tab"
+          id={`casetab-${i}`}
+          aria-controls={`casepanel-${i}`}
+          aria-selected={i === 0 ? 'true' : 'false'}
+        >
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>{c.tabLabel}
+        </button>
+      ))}
+    </div>
+
+    <div class="case-wrap reveal">
+      {cases.map((c, i) => (
+        <div class={`case-panel${i === 0 ? ' active' : ''}`} role="tabpanel" id={`casepanel-${i}`} aria-labelledby={`casetab-${i}`}>
+          <div class="case-card">
+            <div class="case-body">
+              <div class="where"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>{c.where}</div>
+              <h3>{c.title}</h3>
+              <p class="how">{c.text}</p>
+              <div class="case-adv">
+                {c.advantages.map((a) => (
+                  <div class="adv"><div class="stat-n">{a.stat}</div><p>{a.text}</p></div>
+                ))}
+              </div>
+            </div>
+            <div class="case-vis"><div class="case-shots">
+              {c.images.map((img) => (
+                <figure><img src={asset(`assets/${img.src}`)} alt={img.alt} loading="lazy" decoding="async" width={img.width} height={img.height} /></figure>
+              ))}
+            </div></div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="case-cta reveal">
+      <div>
+        <h3>Не знайшли свій сценарій?</h3>
+        <p>Розкажіть про задачу — підберемо діагональ, ПЗ і комплектуючі під ваш процес.</p>
+      </div>
+      <a class="btn btn-gold" href="#contact">Обговорити мій сценарій</a>
+    </div>
+  </div>
+</section>

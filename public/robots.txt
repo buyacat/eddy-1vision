@@ -1,0 +1,6 @@
+# robots.txt — 1-Vision (Eddy Group)
+User-agent: *
+Allow: /
+
+# Коли буде власний домен — заміни тут і в sitemap.xml на нього.
+Sitemap: https://buyacat.github.io/eddy-1vision/sitemap.xml

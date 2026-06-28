@@ -611,14 +611,11 @@ body{counter-reset:secno;}
 /* per-section signatures — each screen animates differently */
 .stats .reveal{transform:translateY(34px) scale(.985);}
 .features .reveal{transform:translateY(20px) scale(.92);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1);}
-.made .made-copy.reveal{transform:translateX(-32px);}
 .made .made-vis.reveal{transform:translateX(34px) rotate(1deg);}
-.software .sw-copy.reveal{transform:translateX(-30px);}
 .software .sw-mock.reveal{transform:perspective(1200px) rotateY(-10deg) translateX(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
 .cases .reveal{transform:translateY(30px) scale(.97);}
 .cases .case-cta.reveal{transform:translateY(20px) scale(.94);}
 .models .model-grid.reveal{transform:none;}
-.contact .contact-copy.reveal{transform:translateX(-28px);}
 .contact .form-card.reveal{transform:translateY(40px) scale(.97);}
 
 /* staggered children (grids / lists) */
