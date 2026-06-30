@@ -699,9 +699,8 @@ body{font-variant-numeric:tabular-nums lining-nums;}
 .eyebrow::before{content:"";width:11px;height:11px;background:none;transform:none;border-radius:0;flex:none;
   background-image:linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor);
   background-size:11px 1px,1px 11px;background-position:center;background-repeat:no-repeat;}
-.sec-head{border-top:none;padding-top:26px;position:relative;grid-template-columns:88px 1fr;}
-.sec-head::before{content:counter(secno,decimal-leading-zero) " / 08";white-space:nowrap;
-  font-family:"JetBrains Mono",monospace;font-weight:600;font-size:12.5px;color:var(--accent);letter-spacing:.04em;}
+.sec-head{border-top:none;padding-top:26px;position:relative;}
+.sec-head::before{display:none;}
 .sec-head::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,var(--accent) 0 60px,var(--ink) 60px 100%);}
 .sec-head.acc-head::after{background:var(--line);height:1px;}
@@ -1342,7 +1341,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
 
   /* нумератор інлайн перед eyebrow — h2 отримує повну ширину */
   .sec-head{display:block;padding-top:20px;}
-  .sec-head::before{display:inline;font-size:10px;margin-right:5px;opacity:.65;letter-spacing:.08em;}
+  .sec-head::before{display:none;}
   .sec-head::after{background:linear-gradient(90deg,var(--accent) 0 20px,var(--ink) 20px 100%);}
   .sec-head h2{font-size:clamp(26px,7.4vw,34px);line-height:1.1;margin-top:6px;}
   .sec-head p{font-size:15px;margin-top:13px;}
@@ -1373,7 +1372,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
     margin-left:-5vw;margin-right:-5vw;width:calc(100% + 14vw);}
   .b1-trio-nest{order:3;margin-top:16px;}
   /* dimrail: vertical size scale on the LEFT of the trio */
-  .b1-dimrail{display:block;position:absolute;left:0;top:0;width:26px;height:100%;
+  .b1-dimrail{display:block;position:absolute;left:5vw;top:0;width:26px;height:100%;
     z-index:10;pointer-events:none;}
   .b1-dimrail::before{display:none;}
   /* hide desktop decorators, show only the <b> text */
@@ -1403,9 +1402,9 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .b1-cta{margin-top:20px;flex-direction:column;align-items:stretch;gap:11px;order:5;}
   .b1-cta .btn{justify-content:center;width:100%;}
   /* sticker: зліва від p65, по центру з першим екраном */
-  .ua-sticker{right:auto;bottom:auto;left:32px;top:18%;
+  .ua-sticker{right:auto;bottom:auto;left:calc(5vw + 32px);top:calc(18% + 20px);
     transform:translateY(-50%);padding:5px 8px;border-radius:8px;}
-  .ua-sticker img{height:39px;}
+  .ua-sticker img{height:45px;}
   /* tblock: 1 рядок під тріо, serial зліва — PASS справа */
   .b1-tblock{order:3;display:flex;flex-direction:row;align-items:center;
     justify-content:space-between;padding:8px 5vw;margin-top:9px;
@@ -1526,9 +1525,11 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   /* D8 · drawer: посилання починаються одразу під нав-баром, безпечна зона знизу */
   .drawer .sheet{justify-content:flex-start;padding-top:68px;padding-bottom:calc(28px + env(safe-area-inset-bottom));}
 
-  /* D14 · comfortable footer link hit-areas (links only — paragraphs keep their rhythm).
-     display:flex (not inline-flex) keeps each link a stacked full-width row, not an inline run. */
-  .footer .fcol a{display:flex;align-items:center;min-height:44px;padding:6px 0;margin:0 0 2px;}
+  /* footer: сервісна підтримка і контакти в компактні рядки */
+  .footer .fcol{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:14px;row-gap:4px;}
+  .footer .fcol h4{width:100%;margin-bottom:4px;}
+  .footer .fcol a,.footer .fcol p{display:inline;min-height:unset;padding:0;margin:0;font-size:12.5px;}
+  .footer-top{gap:20px;}
 
   /* D3 · visible keyboard focus ring (WCAG 2.2 · SC 2.4.13). Cascade-last so it
      beats .field input:focus{outline:none}. Dark ring on light surfaces; gold ring
