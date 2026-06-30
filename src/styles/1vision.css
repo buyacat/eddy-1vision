@@ -1356,17 +1356,18 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   /* ---- HERO ---- */
   .hero-b1{padding-top:clamp(74px,11vh,92px);}
   .b1-rail{padding:16px 18px;font-size:10px;letter-spacing:.08em;gap:6px 14px;}
-  /* flatten bType into b1-stage so we can interleave panels between segs and CTAs */
-  .b1-stage{padding:22px 18px 6px;gap:0;display:flex;flex-direction:column;}
+  /* flatten bType into b1-stage flex so we can reorder freely with b1-trio */
+  .b1-stage{padding:20px 18px 6px;gap:0;display:flex;flex-direction:column;}
   .bType{display:contents;}
-  .b1-h1{font-size:clamp(38px,12.4vw,58px);order:1;margin-top:0;}
-  .b1-sub{font-size:15px;margin-top:14px;order:2;}
-  .b1-segs{margin-top:18px;gap:8px;order:3;}
-  .b1-trio,.b1-trio-nest{order:4;margin-top:20px;}
+  /* order: h1 → subtitle → panels → segs → CTAs → sticker */
+  .b1-h1{font-size:clamp(44px,15vw,64px);order:1;margin-top:0;width:100%;}
+  .b1-sub{font-size:15px;margin-top:14px;order:2;max-width:none;}
+  .b1-trio,.b1-trio-nest{order:3;margin-top:18px;}
+  .b1-segs{margin-top:16px;gap:8px;order:4;}
   /* CTAs: full-width stacked, comfortable tap targets */
   .b1-cta{margin-top:20px;flex-direction:column;align-items:stretch;gap:11px;order:5;}
   .b1-cta .btn{justify-content:center;width:100%;}
-  .ua-sticker{order:6;margin:18px 0 0;align-self:flex-start;}
+  .ua-sticker{order:6;margin:20px 0 0;align-self:flex-start;}
 
   /* ---- STATS → vertical registry: flush-left, hairline rows (no stray
      right-borders, no first-child indent mismatch) ---- */
