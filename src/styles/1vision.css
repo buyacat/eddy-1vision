@@ -1377,7 +1377,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .brand .vline{height:18px;}
   /* trio: diagonal L→R→L cascade, panels 72% wide, explicit absolute positioning */
   /* p86 overflows ~32px below trio but canvas bottom is transparent — no extra margin needed */
-  .b1-trio{order:3;margin-top:2px;height:380px;margin-bottom:8px;overflow:visible;
+  .b1-trio{order:3;margin-top:-13px;height:380px;margin-bottom:8px;overflow:visible;
     margin-left:-5vw;margin-right:-5vw;width:calc(100% + 14vw);}
   .b1-trio-nest{order:3;margin-top:16px;}
   /* dimrail: vertical size scale on the LEFT of the trio */
@@ -1411,9 +1411,9 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .b1-cta{margin-top:20px;flex-direction:column;align-items:stretch;gap:11px;order:5;}
   .b1-cta .btn{justify-content:center;width:100%;}
   /* sticker: зліва від p65, по центру з першим екраном */
-  .ua-sticker{right:auto;bottom:auto;left:2px;top:18%;
-    transform:translateY(-50%);padding:4px 6px;border-radius:8px;}
-  .ua-sticker img{height:26px;}
+  .ua-sticker{right:auto;bottom:auto;left:32px;top:18%;
+    transform:translateY(-50%);padding:5px 8px;border-radius:8px;}
+  .ua-sticker img{height:39px;}
   /* tblock: 1 рядок під тріо, serial зліва — PASS справа */
   .b1-tblock{order:3;display:flex;flex-direction:row;align-items:center;
     justify-content:space-between;padding:8px 5vw;margin-top:4px;
