@@ -17,10 +17,10 @@ const { footer, contacts } = site;
       {footer.columns.map((col) => (
         <div class="fcol">
           <h4>{col.title}</h4>
+          {col.note && <p>{col.note}</p>}
           {col.links.map((l) => (
             <a href={l.href} target={l.external ? '_blank' : undefined} rel={l.external ? 'noreferrer' : undefined}>{l.label}</a>
           ))}
-          {col.note && <p>{col.note}</p>}
         </div>
       ))}
       <div class="fcol">

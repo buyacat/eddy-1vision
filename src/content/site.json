@@ -17,27 +17,63 @@
   },
   "nav": {
     "links": [
-      { "label": "Моделі", "href": "#models" },
-      { "label": "Eddy Trade", "href": "http://trade.eddygroup.eu/", "external": true },
-      { "label": "Новини", "href": "https://eddygroup.eu/news/", "external": true },
-      { "label": "Контакти", "href": "https://eddygroup.eu/contact/", "external": true }
+      {
+        "label": "Моделі",
+        "href": "#models"
+      },
+      {
+        "label": "Eddy Trade",
+        "href": "http://trade.eddygroup.eu/",
+        "external": true
+      },
+      {
+        "label": "Новини",
+        "href": "https://eddygroup.eu/news/",
+        "external": true
+      },
+      {
+        "label": "Контакти",
+        "href": "https://eddygroup.eu/contact/",
+        "external": true
+      }
     ],
     "ctaLabel": "Залишити заявку"
   },
   "hero": {
-    "rail": ["ЛІНІЯ 01 · ВТК · UA", "МАРКА 1-VISION · ПАРТІЯ 2026"],
-    "titleLines": ["Інтерактивні панелі", "Виробництво", "1-Vision"],
+    "rail": [
+      "ЛІНІЯ 01 · ВТК · UA",
+      "МАРКА 1-VISION · ПАРТІЯ 2026"
+    ],
+    "titleLines": [
+      "Інтерактивні панелі",
+      "Виробництво",
+      "1-Vision"
+    ],
     "subtitle": "Повний цикл — від матриці до пакування — на власному майданчику аерокосмічного приладобудування. Без посередників.",
-    "segments": ["Освіта", "Бізнес", "Оборона"],
-    "ctaPrimary": { "label": "Замовити демонстрацію", "href": "#contact" },
-    "ctaSecondary": { "label": "Екскурсія виробництвом", "href": "#made" },
+    "segments": [
+      "Освіта",
+      "Бізнес",
+      "Оборона"
+    ],
+    "ctaPrimary": {
+      "label": "Замовити демонстрацію",
+      "href": "#contact"
+    },
+    "ctaSecondary": {
+      "label": "Екскурсія виробництвом",
+      "href": "#made"
+    },
     "plate": {
       "name": "1-VISION",
       "serial": "СЕР.№ 1V-0001 · 86″ 4K UHD",
       "qc": "ВТК · UA",
       "status": "PASS"
     },
-    "diagonals": ["65″", "75″", "86″"]
+    "diagonals": [
+      "65″",
+      "75″",
+      "86″"
+    ]
   },
   "compliance": "<b>Відповідає вимогам</b> програми «Нова українська школа» та Ukraine Facility.",
   "contactSection": {
@@ -61,22 +97,23 @@
     "description": "Інтерактивні панелі 1-Vision. Власне програмне забезпечення, виробництво, сервіс і підтримка в Україні.",
     "columns": [
       {
-        "title": "Продукт",
+        "title": "Сервісна підтримка",
+        "note": "Пн–Пт: 09:00–18:00",
         "links": [
-          { "label": "Технології", "href": "#features" },
-          { "label": "Софт для шкіл", "href": "#software" },
-          { "label": "Моделі та ціни", "href": "#models" },
-          { "label": "Застосування", "href": "#cases" }
+          {
+            "label": "+380 93 270 82 04",
+            "href": "tel:+380932708204"
+          },
+          {
+            "label": "service@eddygroup.eu",
+            "href": "mailto:service@eddygroup.eu"
+          },
+          {
+            "label": "Гарантійні умови",
+            "href": "https://eddygroup.eu/wp-content/uploads/2026/03/garantijni-umovy.docx",
+            "external": true
+          }
         ]
-      },
-      {
-        "title": "Компанія",
-        "links": [
-          { "label": "Виробництво", "href": "#made" },
-          { "label": "eddygroup.eu", "href": "https://eddygroup.eu", "external": true },
-          { "label": "Контакти", "href": "#contact" }
-        ],
-        "note": "Prozorro Market"
       }
     ],
     "buildplate": "1-VISION · UA · СЕР. №1V-____ · ──┤ 65″ / 75″ / 86″ ├──",
