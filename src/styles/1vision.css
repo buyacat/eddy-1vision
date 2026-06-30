@@ -1349,27 +1349,28 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .sec-head{grid-template-columns:34px 1fr;column-gap:12px;padding-top:20px;}
   .sec-head::before{content:counter(secno,decimal-leading-zero);font-size:11.5px;}
   .sec-head::after{background:linear-gradient(90deg,var(--accent) 0 24px,var(--ink) 24px 100%);}
-  .sec-head h2{font-size:clamp(26px,7.4vw,34px);}
+  .sec-head h2{font-size:clamp(26px,7.4vw,34px);line-height:1.1;}
   .sec-head p{font-size:15px;margin-top:13px;}
   .eyebrow{font-size:11px;}
 
   /* ---- HERO ---- */
-  .hero-b1{padding-top:clamp(74px,11vh,92px);}
-  .b1-rail{padding:16px 18px;font-size:10px;letter-spacing:.08em;gap:6px 14px;}
+  .hero-b1{padding-top:clamp(58px,9vh,72px);}
+  .b1-rail{padding:10px 18px;font-size:10px;letter-spacing:.08em;gap:4px 12px;}
   /* flatten bType into b1-stage flex so we can reorder freely with b1-trio */
-  .b1-stage{padding:20px 18px 16px;gap:0;display:flex;flex-direction:column;}
+  .b1-stage{padding:12px 18px 12px;gap:0;display:flex;flex-direction:column;}
   .bType{display:contents;}
   /* order: h1 → subtitle → panels → segs → CTAs → sticker */
   .b1-h1{font-size:clamp(44px,15vw,64px);order:1;margin-top:0;width:100%;}
-  .b1-sub{font-size:15px;margin-top:14px;order:2;max-width:none;}
+  .b1-sub{font-size:15px;margin-top:8px;order:2;max-width:none;}
   /* nav: shrink logos so burger fits */
   .nav-inner{padding:12px 16px;}
+  .nav.scrolled .nav-inner{margin:10px 7vw;}
   .brand .logo{height:22px;}
-  .brand .logo-1v{height:19px;}
+  .brand .logo-1v{height:23px;}
   .brand .vline{height:18px;}
   /* trio: diagonal L→R→L cascade, panels 72% wide, explicit absolute positioning */
-  /* margin-bottom = overflow of p86 canvas (102px) minus its transparent bottom (22%*296=65px) + 8px gap */
-  .b1-trio{order:3;margin-top:8px;height:440px;margin-bottom:35px;overflow:visible;}
+  /* p86 overflows ~32px below trio but canvas bottom is transparent — no extra margin needed */
+  .b1-trio{order:3;margin-top:2px;height:380px;margin-bottom:8px;overflow:visible;}
   .b1-trio-nest{order:3;margin-top:16px;}
   /* dimrail: vertical size scale on the LEFT of the trio */
   .b1-dimrail{display:block;position:absolute;left:0;top:0;width:26px;height:100%;
@@ -1382,19 +1383,19 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
     font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;
     color:rgba(236,230,218,.72);letter-spacing:.06em;white-space:nowrap;
     writing-mode:vertical-rl;text-orientation:mixed;}
-  /* vertical positions match panel tops: 0 / 28% / 56% */
+  /* vertical positions match panel tops */
   .b1-dim65{top:2%;}
-  .b1-dim75{top:29%;}
-  .b1-dim86{top:57%;}
+  .b1-dim75{top:14%;}
+  .b1-dim86{top:28%;}
   /* diagonal composition: SIZE PROGRESSION — 65"<75"<86", panels shift right */
   .b1-p{position:absolute!important;transform:none!important;}
   .b1-p65{width:54%!important;left:26px!important;right:auto!important;top:0!important;z-index:3;}
   .b1-p65 img{mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;
     -webkit-mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;}
-  .b1-p75{width:64%!important;right:0!important;left:auto!important;top:28%!important;z-index:2;}
+  .b1-p75{width:64%!important;right:0!important;left:auto!important;top:14%!important;z-index:2;}
   .b1-p75 img{mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;
     -webkit-mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;}
-  .b1-p86{width:76%!important;left:12%!important;right:auto!important;top:56%!important;z-index:1;}
+  .b1-p86{width:90%!important;left:5%!important;right:auto!important;top:28%!important;z-index:1;}
   .b1-p86 img{mask-image:none!important;-webkit-mask-image:none!important;}
   .b1-trio-halo,.b1-beam,.b1-sweep{display:none;}
   .b1-segs{margin-top:20px;gap:8px;order:4;}
@@ -1415,9 +1416,9 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .stat .n{font-size:clamp(33px,10.5vw,44px);}
   .stat .l{margin-top:8px;}
 
-  /* ---- CASE tabs → 2×2 grid ---- */
-  .case-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:28px;}
-  .case-tab{width:100%;justify-content:flex-start;}
+  /* ---- CASE tabs → 1 стовпець (довгі мітки не переносяться, рядки рівні) ---- */
+  .case-tabs{display:flex;flex-direction:column;gap:6px;margin-top:28px;}
+  .case-tab{justify-content:flex-start;font-size:13.5px;}
   .case-body{padding:28px 22px;}
   .case-body h3{font-size:25px;}
   .case-body .how{font-size:14.5px;}
@@ -1507,8 +1508,8 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .field input{min-height:48px;}
   .field textarea{min-height:96px;}
 
-  /* D8 · drawer links drop into the bottom thumb zone + clear the home indicator */
-  .drawer .sheet{justify-content:flex-end;padding-bottom:calc(28px + env(safe-area-inset-bottom));}
+  /* D8 · drawer: посилання починаються одразу під нав-баром, безпечна зона знизу */
+  .drawer .sheet{justify-content:flex-start;padding-top:68px;padding-bottom:calc(28px + env(safe-area-inset-bottom));}
 
   /* D14 · comfortable footer link hit-areas (links only — paragraphs keep their rhythm).
      display:flex (not inline-flex) keeps each link a stacked full-width row, not an inline run. */
