@@ -580,10 +580,11 @@ img{display:block;max-width:100%;}
 .footer{background:var(--navy-2);color:#ABA08B;padding:64px 0 32px;}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;
   padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);}
-.footer .f-brand .logo{height:24px;margin-bottom:16px;}
+.footer .f-brand{display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.footer .f-brand .logo{height:32px;}
 .footer .f-brand p{font-size:13.5px;line-height:1.6;max-width:260px;color:#8E8472;margin:0 0 16px;}
 .footer .f-badges{display:flex;gap:10px;align-items:center;}
-.footer .f-badges img{height:34px;width:auto;border-radius:6px;background:#fff;padding:3px 5px;}
+.footer .f-badges img{height:56px;width:auto;border-radius:6px;background:#fff;padding:4px 7px;}
 .footer .fcol h4{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;
   text-transform:uppercase;color:#837A66;margin:0 0 16px;font-weight:600;}
 .footer .fcol a,.footer .fcol p{display:block;font-size:13.5px;color:#ABA08B;margin:0 0 11px;transition:color .2s;}
@@ -1336,7 +1337,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
 
 @media(max-width:600px){
   /* ---- vertical rhythm & gutters ---- */
-  .sec{padding:62px 0;}
+  .sec{padding:44px 0;}
   .wrap{padding:0 5vw;}
 
   /* нумератор інлайн перед eyebrow — h2 отримує повну ширину */
@@ -1525,11 +1526,12 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   /* D8 · drawer: посилання починаються одразу під нав-баром, безпечна зона знизу */
   .drawer .sheet{justify-content:flex-start;padding-top:68px;padding-bottom:calc(28px + env(safe-area-inset-bottom));}
 
-  /* footer: сервісна підтримка і контакти в компактні рядки */
-  .footer .fcol{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:14px;row-gap:4px;}
-  .footer .fcol h4{width:100%;margin-bottom:4px;}
-  .footer .fcol a,.footer .fcol p{display:inline;min-height:unset;padding:0;margin:0;font-size:12.5px;}
-  .footer-top{gap:20px;}
+  /* footer: f-brand зверху, 2 fcol-колонки паралельно */
+  .footer-top{grid-template-columns:1fr 1fr;gap:20px 16px;}
+  .footer .f-brand{grid-column:1/-1;}
+  .footer .fcol{display:flex;flex-direction:column;gap:5px;}
+  .footer .fcol h4{margin-bottom:2px;}
+  .footer .fcol a,.footer .fcol p{display:block;min-height:unset;padding:0;margin:0;font-size:12.5px;}
 
   /* D3 · visible keyboard focus ring (WCAG 2.2 · SC 2.4.13). Cascade-last so it
      beats .field input:focus{outline:none}. Dark ring on light surfaces; gold ring
