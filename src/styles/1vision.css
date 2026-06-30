@@ -1348,7 +1348,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
 @media(max-width:600px){
   /* ---- vertical rhythm & gutters ---- */
   .sec{padding:62px 0;}
-  .wrap{padding:0 18px;}
+  .wrap{padding:0 10vw;}
 
   /* ---- spec-plate header: drop the “/ 08”, slim the index gutter →
      the H2 gets the width back ---- */
@@ -1363,24 +1363,23 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .hero-b1{padding-top:clamp(58px,9vh,72px);}
   .b1-rail{display:none;}
   /* flatten bType into b1-stage flex so we can reorder freely with b1-trio */
-  .b1-stage{padding:12px 18px 12px;gap:0;display:flex;flex-direction:column;}
+  .b1-stage{padding:12px 10vw 12px;gap:0;display:flex;flex-direction:column;}
   .bType{display:contents;}
   /* order: title-row → subtitle → panels → segs → CTAs */
-  .b1-title-row{order:1;position:relative;display:block;}
-  .b1-title-row .ua-sticker{position:absolute;right:0;top:50%;transform:translateY(-50%);
-    margin:0;z-index:0;}
-  .b1-h1{font-size:clamp(44px,15vw,64px);margin-top:0;width:100%;
-    position:relative;z-index:1;}
+  .b1-title-row{order:1;display:flex;align-items:flex-start;}
+  .b1-title-row .b1-h1{flex:1;}
+  .b1-h1{font-size:clamp(44px,15vw,64px);margin-top:0;}
   .b1-sub{font-size:15px;margin-top:8px;order:2;max-width:none;}
   /* nav: shrink logos so burger fits */
-  .nav-inner{padding:12px 16px;}
-  .nav.scrolled .nav-inner{margin:10px 5vw;}
+  .nav-inner{padding:12px 10vw;}
+  .nav.scrolled .nav-inner{margin:10px 10vw;}
   .brand .logo{height:22px;}
   .brand .logo-1v{height:23px;}
   .brand .vline{height:18px;}
   /* trio: diagonal L→R→L cascade, panels 72% wide, explicit absolute positioning */
   /* p86 overflows ~32px below trio but canvas bottom is transparent — no extra margin needed */
-  .b1-trio{order:3;margin-top:2px;height:380px;margin-bottom:8px;overflow:visible;}
+  .b1-trio{order:3;margin-top:2px;height:380px;margin-bottom:8px;overflow:visible;
+    margin-left:-10vw;margin-right:-10vw;width:calc(100% + 20vw);}
   .b1-trio-nest{order:3;margin-top:16px;}
   /* dimrail: vertical size scale on the LEFT of the trio */
   .b1-dimrail{display:block;position:absolute;left:0;top:0;width:26px;height:100%;
@@ -1416,7 +1415,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .ua-sticker img{height:32px;}
   /* tblock: 1 рядок під тріо, serial зліва — PASS справа */
   .b1-tblock{order:3;display:flex;flex-direction:row;align-items:center;
-    justify-content:space-between;padding:8px 14px;margin-top:4px;
+    justify-content:space-between;padding:8px 10vw;margin-top:4px;
     width:100%;border-top:1px solid var(--b1-hair);grid-template-columns:unset;}
   .b1-tc{padding:6px 0;border-right:none;font-size:11px;}
   .b1-tc:first-child{padding-left:0;}
@@ -1453,7 +1452,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .feat{padding:18px 0;column-gap:10px;grid-template-columns:64px 1fr;}
   .compliance{flex-direction:column;align-items:flex-start;gap:10px;}
   .feat .fmark{font-size:26px;}
-  .feat .fmark .u{font-size:8.5px;}
+  .feat .fmark .u{font-size:9.5px;color:var(--slate);}
   .feat h4{font-size:14px;}
   .feat .spec{font-size:10px;}
   .feat p{font-size:12.5px;}
