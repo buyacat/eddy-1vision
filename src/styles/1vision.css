@@ -1462,9 +1462,9 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .sw-grid{gap:30px;}
   .sw-cap p{font-size:14px;}
   /* mock: 3-D tilt — right side closer to viewer */
-  .software .sw-mock.reveal{transform:perspective(800px) rotateY(-7deg) rotateX(2deg);}
-  .software .sw-mock.reveal.in{transform:perspective(800px) rotateY(-7deg) rotateX(2deg);}
-  .sw-mock{max-width:90%;margin-left:auto;}
+  .software .sw-mock.reveal{transform:perspective(900px) rotateY(-6deg) rotateX(2deg);}
+  .software .sw-mock.reveal.in{transform:perspective(900px) rotateY(-6deg) rotateX(2deg);}
+  .sw-mock{max-width:100%;margin-left:0;}
   /* float badges: smaller on mobile */
   .sw-float{padding:8px 12px;border-radius:10px;}
   .sw-float .k{font-size:8.5px;}
