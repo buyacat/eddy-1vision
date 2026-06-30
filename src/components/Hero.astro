@@ -20,14 +20,11 @@ const { hero } = site;
   <!-- center stage: copy | trio panels -->
   <div class="b1-stage">
     <div class="bType">
-      <div class="b1-title-row">
-        <h1 class="b1-h1">
-          <span class="b1-row b1-small">{hero.titleLines[0]}</span>
-          <span class="b1-row">{hero.titleLines[1]}</span>
-          <span class="b1-row b1-big">{hero.titleLines[2]}</span>
-        </h1>
-        <div class="ua-sticker"><img src={asset("assets/made-in-ua.png")} alt="Зроблено в Україні" /></div>
-      </div>
+      <h1 class="b1-h1">
+        <span class="b1-row b1-small">{hero.titleLines[0]}</span>
+        <span class="b1-row">{hero.titleLines[1]}</span>
+        <span class="b1-row b1-big">{hero.titleLines[2]}</span>
+      </h1>
       <p class="b1-sub" set:html={hero.subtitle}></p>
       <div class="b1-segs">
         <span class="b1-segs-lbl">Сфери</span>
@@ -41,6 +38,7 @@ const { hero } = site;
 
     <!-- Trio (layouts A / B / C) -->
     <div class="b1-trio">
+      <div class="ua-sticker"><img src={asset("assets/made-in-ua.png")} alt="Зроблено в Україні" /></div>
       <div class="b1-dimrail" aria-hidden="true">
         <span class="b1-dim b1-dim65"><b>{hero.diagonals[0]}</b></span>
         <span class="b1-dim b1-dim75"><b>{hero.diagonals[1]}</b></span>
