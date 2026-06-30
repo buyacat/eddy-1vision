@@ -654,7 +654,7 @@ body{counter-reset:secno;}
   .sec{padding:84px 0;}
 }
 @media(max-width:560px){
-  .wrap{padding:0 20px;}
+  .wrap{padding:0 5vw;}
   .stat-grid,.footer-top{grid-template-columns:1fr;}
   .acc-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
   .field.row{grid-template-columns:1fr;}
@@ -1348,7 +1348,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
 @media(max-width:600px){
   /* ---- vertical rhythm & gutters ---- */
   .sec{padding:62px 0;}
-  .wrap{padding:0 10vw;}
+  .wrap{padding:0 5vw;}
 
   /* ---- spec-plate header: drop the “/ 08”, slim the index gutter →
      the H2 gets the width back ---- */
@@ -1363,23 +1363,25 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .hero-b1{padding-top:clamp(58px,9vh,72px);}
   .b1-rail{display:none;}
   /* flatten bType into b1-stage flex so we can reorder freely with b1-trio */
-  .b1-stage{padding:12px 10vw 12px;gap:0;display:flex;flex-direction:column;}
+  .b1-stage{padding:12px 5vw 12px;gap:0;display:flex;flex-direction:column;}
   .bType{display:contents;}
   /* order: title-row → subtitle → panels → segs → CTAs */
-  .b1-title-row{order:1;display:flex;align-items:flex-start;}
+  .b1-title-row{order:1;display:flex;align-items:flex-start;gap:10px;}
   .b1-title-row .b1-h1{flex:1;}
+  /* стікер вирівняний по першому рядку тайтлу: знімаємо зайвий padding зверху */
+  .b1-title-row .ua-sticker{padding:4px 8px;border-radius:8px;align-self:flex-start;margin-top:0;}
   .b1-h1{font-size:clamp(44px,15vw,64px);margin-top:0;}
   .b1-sub{font-size:15px;margin-top:8px;order:2;max-width:none;}
   /* nav: shrink logos so burger fits */
-  .nav-inner{padding:12px 10vw;}
-  .nav.scrolled .nav-inner{margin:10px 10vw;}
+  .nav-inner{padding:12px 5vw;}
+  .nav.scrolled .nav-inner{margin:10px 5vw;}
   .brand .logo{height:22px;}
   .brand .logo-1v{height:23px;}
   .brand .vline{height:18px;}
   /* trio: diagonal L→R→L cascade, panels 72% wide, explicit absolute positioning */
   /* p86 overflows ~32px below trio but canvas bottom is transparent — no extra margin needed */
   .b1-trio{order:3;margin-top:2px;height:380px;margin-bottom:8px;overflow:visible;
-    margin-left:-10vw;margin-right:-10vw;width:calc(100% + 20vw);}
+    margin-left:-5vw;margin-right:-5vw;width:calc(100% + 14vw);}
   .b1-trio-nest{order:3;margin-top:16px;}
   /* dimrail: vertical size scale on the LEFT of the trio */
   .b1-dimrail{display:block;position:absolute;left:0;top:0;width:26px;height:100%;
@@ -1398,13 +1400,13 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .b1-dim86{top:38%;}
   /* diagonal composition: SIZE PROGRESSION — 65"<75"<86", panels shift right */
   .b1-p{position:absolute!important;transform:none!important;}
-  .b1-p65{width:62%!important;left:18%!important;right:auto!important;top:0!important;z-index:3;}
+  .b1-p65{width:62%!important;left:23%!important;right:auto!important;top:0!important;z-index:3;}
   .b1-p65 img{mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;
     -webkit-mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;}
-  .b1-p75{width:74%!important;right:0!important;left:auto!important;top:14%!important;z-index:2;}
+  .b1-p75{width:74%!important;left:31%!important;right:auto!important;top:14%!important;z-index:2;}
   .b1-p75 img{mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;
     -webkit-mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;}
-  .b1-p86{width:90%!important;left:5%!important;right:auto!important;top:28%!important;z-index:1;}
+  .b1-p86{width:90%!important;left:0!important;right:auto!important;top:28%!important;z-index:1;}
   .b1-p86 img{mask-image:none!important;-webkit-mask-image:none!important;}
   .b1-trio-halo,.b1-beam,.b1-sweep{display:none;}
   .b1-segs{margin-top:20px;gap:8px;order:4;}
@@ -1415,8 +1417,8 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .ua-sticker img{height:32px;}
   /* tblock: 1 рядок під тріо, serial зліва — PASS справа */
   .b1-tblock{order:3;display:flex;flex-direction:row;align-items:center;
-    justify-content:space-between;padding:8px 10vw;margin-top:4px;
-    width:100%;border-top:1px solid var(--b1-hair);grid-template-columns:unset;}
+    justify-content:space-between;padding:8px 5vw;margin-top:4px;
+    width:100%;border-top:none;background:transparent;grid-template-columns:unset;}
   .b1-tc{padding:6px 0;border-right:none;font-size:11px;}
   .b1-tc:first-child{padding-left:0;}
 
@@ -1460,10 +1462,14 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   /* ---- SOFTWARE ---- */
   .sw-grid{gap:30px;}
   .sw-cap p{font-size:14px;}
-  /* mock: no 3-D tilt on mobile — kills right-edge clip */
-  .software .sw-mock.reveal{transform:none;}
-  .software .sw-mock.reveal.in{transform:none;}
-  .sw-mock{max-width:80%;margin-left:0;}
+  /* mock: subtle 3-D tilt, bigger, tilts left so right edge stays on screen */
+  .software .sw-mock.reveal{transform:perspective(700px) rotateY(5deg) rotateX(2deg);transform-origin:left center;}
+  .software .sw-mock.reveal.in{transform:perspective(700px) rotateY(5deg) rotateX(2deg);transform-origin:left center;}
+  .sw-mock{max-width:90%;margin-left:0;}
+  /* float badges: smaller on mobile */
+  .sw-float{padding:8px 12px;border-radius:10px;}
+  .sw-float .k{font-size:8.5px;}
+  .sw-float .v{font-size:13px;margin-top:2px;}
 
   /* ---- MODELS / ACCESSORIES ---- */
   .model-dots{
@@ -1549,7 +1555,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   /* monument: stack figure over copy so the big «1/3» isn't squeezed */
   .monument{grid-template-columns:1fr;gap:16px;}
   .monument .mono-figure{justify-content:flex-start;}
-  .monument .big{font-size:clamp(54px,17vw,78px);}
+  .monument .big{font-size:clamp(54px,15vw,78px);}
 }
 
 @media(max-width:380px){
