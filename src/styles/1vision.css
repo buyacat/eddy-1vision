@@ -669,7 +669,7 @@ body{counter-reset:secno;}
 
 /* ---------- datasheet detailing ---------- */
 .compliance{background:#EDF1F6;border-color:#D3DEEA;}
-.compliance .ck{background:var(--accent);}
+.compliance .ck{background:var(--ok);}
 .compliance b{color:var(--accent-deep);}
 .compliance span{color:var(--accent-deep);}
 
@@ -1440,6 +1440,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   /* ---- FEATURES ---- */
   .feat-grid{gap:0 10px;}
   .feat{padding:18px 0;column-gap:10px;grid-template-columns:64px 1fr;}
+  .compliance{flex-direction:column;align-items:flex-start;gap:10px;}
   .feat .fmark{font-size:26px;}
   .feat .fmark .u{font-size:8.5px;}
   .feat h4{font-size:14px;}
