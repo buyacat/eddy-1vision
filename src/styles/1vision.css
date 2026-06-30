@@ -1332,8 +1332,10 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   /* HERO: once the stage stacks, the «ВТК sticker slapped on the product»
      metaphor breaks and the sticker floats in dead space — promote it to a
      trust badge pinned at the top of the copy instead */
+  .b1-title-row{display:flex;align-items:flex-start;gap:12px;}
+  .b1-title-row .b1-h1{flex:1;}
   .ua-sticker{position:static;right:auto;bottom:auto;align-self:flex-start;
-    margin:0 0 18px;display:flex;width:max-content;max-width:100%;
+    margin:0;flex-shrink:0;display:flex;width:max-content;max-width:100%;
     box-shadow:0 10px 24px -14px rgba(0,0,0,.55);}
   .ua-sticker img{height:40px;}
 
@@ -1393,10 +1395,10 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .b1-dim86{top:38%;}
   /* diagonal composition: SIZE PROGRESSION — 65"<75"<86", panels shift right */
   .b1-p{position:absolute!important;transform:none!important;}
-  .b1-p65{width:54%!important;left:18%!important;right:auto!important;top:0!important;z-index:3;}
+  .b1-p65{width:62%!important;left:18%!important;right:auto!important;top:0!important;z-index:3;}
   .b1-p65 img{mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;
     -webkit-mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;}
-  .b1-p75{width:64%!important;right:0!important;left:auto!important;top:14%!important;z-index:2;}
+  .b1-p75{width:74%!important;right:0!important;left:auto!important;top:14%!important;z-index:2;}
   .b1-p75 img{mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;
     -webkit-mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;}
   .b1-p86{width:90%!important;left:5%!important;right:auto!important;top:28%!important;z-index:1;}
@@ -1406,9 +1408,14 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   /* CTAs: full-width stacked, comfortable tap targets */
   .b1-cta{margin-top:20px;flex-direction:column;align-items:stretch;gap:11px;order:5;}
   .b1-cta .btn{justify-content:center;width:100%;}
-  /* sticker: compact badge at bottom */
-  .ua-sticker{order:6;margin:20px 0 0;align-self:flex-start;padding:7px 12px;}
-  .ua-sticker img{height:30px;}
+  /* sticker: всередині b1-title-row, розмір трохи менший */
+  .ua-sticker img{height:32px;}
+  /* tblock: 1 рядок під тріо, serial зліва — PASS справа */
+  .b1-tblock{order:3;display:flex;flex-direction:row;align-items:center;
+    justify-content:space-between;padding:8px 14px;margin-top:4px;
+    border-top:1px solid var(--b1-hair);grid-template-columns:unset;}
+  .b1-tc{padding:6px 0;border-right:none;font-size:11px;}
+  .b1-tc:first-child{padding-left:0;}
 
   /* ---- STATS → vertical registry: flush-left, hairline rows (no stray
      right-borders, no first-child indent mismatch) ---- */
