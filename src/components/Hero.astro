@@ -20,13 +20,15 @@ const { hero } = site;
   <!-- center stage: copy | trio panels -->
   <div class="b1-stage">
     <div class="bType">
-      <div class="ua-sticker"><img src={asset("assets/made-in-ua.png")} alt="Зроблено в Україні" /></div>
-      <h1 class="b1-h1">
-        <span class="b1-row b1-small">{hero.titleLines[0]}</span>
-        <span class="b1-row">{hero.titleLines[1]}</span>
-        <span class="b1-row b1-big">{hero.titleLines[2]}</span>
-      </h1>
-      <p class="b1-sub">{hero.subtitle}</p>
+      <div class="b1-title-row">
+        <h1 class="b1-h1">
+          <span class="b1-row b1-small">{hero.titleLines[0]}</span>
+          <span class="b1-row">{hero.titleLines[1]}</span>
+          <span class="b1-row b1-big">{hero.titleLines[2]}</span>
+        </h1>
+        <div class="ua-sticker"><img src={asset("assets/made-in-ua.png")} alt="Зроблено в Україні" /></div>
+      </div>
+      <p class="b1-sub" set:html={hero.subtitle}></p>
       <div class="b1-segs">
         <span class="b1-segs-lbl">Сфери</span>
         {hero.segments.map((s) => <span class="b1-seg-pill"><i></i>{s}</span>)}
@@ -61,14 +63,12 @@ const { hero } = site;
       </div>
       <span class="b1-badge b1-badge-abs">∞</span>
     </div>
-  </div>
 
-  <!-- bottom plate -->
-  <div class="b1-tblock">
-    <div class="b1-tc name">{hero.plate.name}</div>
-    <div class="b1-tc">{hero.plate.serial}</div>
-    <div class="b1-tc">{hero.plate.qc}</div>
-    <div class="b1-tc pass"><span class="dot"></span> {hero.plate.status}</div>
+    <!-- bottom plate — під панелями -->
+    <div class="b1-tblock">
+      <div class="b1-tc">{hero.plate.serial}</div>
+      <div class="b1-tc pass"><span class="dot"></span> {hero.plate.status}</div>
+    </div>
   </div>
 
 </section>
