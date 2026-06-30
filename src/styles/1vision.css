@@ -1382,6 +1382,8 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .case-body .how{font-size:14.5px;}
   .case-body .where{align-items:flex-start;}
   .adv .stat-n{font-size:23px;min-width:62px;}
+  .case-adv{display:grid;grid-template-columns:1fr 1fr;gap:0 12px;}
+  .case-adv .adv:last-child:nth-child(odd){grid-column:1/-1;}
   .case-cta{padding:26px 22px;}
 
   /* ---- MADE rail: tighten so node + text breathe ---- */
