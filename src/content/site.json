@@ -18,9 +18,9 @@
   "nav": {
     "links": [
       { "label": "Моделі", "href": "#models" },
-      { "label": "Eddy Trade", "href": "https://eddytrade.com.ua", "external": true },
-      { "label": "Новини", "href": "#news" },
-      { "label": "Контакти", "href": "#contact" }
+      { "label": "Eddy Trade", "href": "http://trade.eddygroup.eu/", "external": true },
+      { "label": "Новини", "href": "https://eddygroup.eu/news/", "external": true },
+      { "label": "Контакти", "href": "https://eddygroup.eu/contact/", "external": true }
     ],
     "ctaLabel": "Залишити заявку"
   },
