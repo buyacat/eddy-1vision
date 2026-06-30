@@ -164,8 +164,8 @@ body{counter-reset:secno;}
 .nav-open .drawer{pointer-events:auto;}
 .nav-open .drawer .scrim{opacity:1;}
 .nav-open .drawer .sheet{transform:translateX(0);}
-.drawer .sheet a{font-family:"Sora",sans-serif;font-size:20px;font-weight:600;
-  color:var(--ink);padding:14px 8px;border-bottom:1px solid var(--line-2);}
+.drawer .sheet a{font-family:"Sora",sans-serif;font-size:17px;font-weight:600;
+  color:var(--ink);padding:11px 8px;border-bottom:1px solid var(--line-2);}
 .drawer .sheet a:last-of-type{border-bottom:none;}
 .drawer .sheet .btn{margin-top:18px;justify-content:center;}
 
@@ -1368,19 +1368,33 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .brand .logo-1v{height:19px;}
   .brand .vline{height:18px;}
   /* trio: diagonal L→R→L cascade, panels 72% wide, explicit absolute positioning */
-  .b1-trio{order:3;margin-top:16px;height:380px;overflow:visible;}
+  /* margin-bottom = overflow of p86 canvas (102px) minus its transparent bottom (22%*296=65px) + 8px gap */
+  .b1-trio{order:3;margin-top:8px;height:440px;margin-bottom:35px;overflow:visible;}
   .b1-trio-nest{order:3;margin-top:16px;}
-  /* dimrail overlaps content on mobile — hide */
-  .b1-dimrail{display:none;}
-  /* diagonal composition: each panel 72% wide, staggered L/R/L */
-  .b1-p{position:absolute!important;width:72%!important;transform:none!important;}
-  .b1-p65{left:0!important;right:auto!important;top:0!important;z-index:3;}
+  /* dimrail: vertical size scale on the LEFT of the trio */
+  .b1-dimrail{display:block;position:absolute;left:0;top:0;width:26px;height:100%;
+    z-index:10;pointer-events:none;}
+  .b1-dimrail::before{display:none;}
+  /* hide desktop decorators, show only the <b> text */
+  .b1-dim{position:absolute;left:0;transform:none;top:auto;}
+  .b1-dim::before,.b1-dim::after{display:none;}
+  .b1-dim b{position:static;transform:none;left:auto;bottom:auto;
+    font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;
+    color:rgba(236,230,218,.72);letter-spacing:.06em;white-space:nowrap;
+    writing-mode:vertical-rl;text-orientation:mixed;}
+  /* vertical positions match panel tops: 0 / 28% / 56% */
+  .b1-dim65{top:2%;}
+  .b1-dim75{top:29%;}
+  .b1-dim86{top:57%;}
+  /* diagonal composition: SIZE PROGRESSION — 65"<75"<86", panels shift right */
+  .b1-p{position:absolute!important;transform:none!important;}
+  .b1-p65{width:54%!important;left:26px!important;right:auto!important;top:0!important;z-index:3;}
   .b1-p65 img{mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;
     -webkit-mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;}
-  .b1-p75{right:0!important;left:auto!important;top:28%!important;z-index:2;}
+  .b1-p75{width:64%!important;right:0!important;left:auto!important;top:28%!important;z-index:2;}
   .b1-p75 img{mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;
     -webkit-mask-image:linear-gradient(180deg,#000 55%,#000 70%,transparent 100%)!important;}
-  .b1-p86{left:14%!important;right:auto!important;top:56%!important;z-index:1;}
+  .b1-p86{width:76%!important;left:12%!important;right:auto!important;top:56%!important;z-index:1;}
   .b1-p86 img{mask-image:none!important;-webkit-mask-image:none!important;}
   .b1-trio-halo,.b1-beam,.b1-sweep{display:none;}
   .b1-segs{margin-top:20px;gap:8px;order:4;}
