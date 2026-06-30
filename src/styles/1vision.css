@@ -160,14 +160,16 @@ body{counter-reset:secno;}
 .drawer .sheet{position:absolute;top:0;right:0;bottom:0;width:min(82vw,360px);
   background:#fff;box-shadow:-20px 0 60px rgba(40,30,16,.28);
   transform:translateX(100%);transition:transform .32s cubic-bezier(.4,.0,.1,1);
-  display:flex;flex-direction:column;padding:88px 28px 28px;gap:6px;}
+  display:flex;flex-direction:column;padding:110px 28px 28px;gap:6px;}
 .nav-open .drawer{pointer-events:auto;}
 .nav-open .drawer .scrim{opacity:1;}
 .nav-open .drawer .sheet{transform:translateX(0);}
 .drawer .sheet a{font-family:"Sora",sans-serif;font-size:17px;font-weight:600;
   color:var(--ink);padding:11px 8px;border-bottom:1px solid var(--line-2);}
 .drawer .sheet a:last-of-type{border-bottom:none;}
-.drawer .sheet .btn{margin-top:18px;justify-content:center;}
+.drawer .sheet .btn{margin-top:18px;justify-content:center;
+  background:#F5A800;color:#1A1000;border-color:#F5A800;}
+.drawer .sheet .btn:hover{background:#E09800;border-color:#E09800;color:#1A1000;}
 
 /* ============================================================
    HERO  (3 variants via [data-hero])
@@ -1080,14 +1082,16 @@ body:has([data-hero="b1"]) .nav:not(.scrolled) .burger span{background:rgba(236,
 .b1-tag .b{color:var(--b1-blue-soft,#88A6C4);}
 
 /* bottom plate */
-.b1-tblock{position:relative;z-index:4;display:grid;grid-template-columns:1.1fr 1.5fr 1fr .8fr;
+.b1-tblock{position:relative;z-index:4;display:grid;grid-template-columns:1fr auto;
   border-top:1px solid var(--b1-hair);background:rgba(236,230,218,.02);}
-.b1-tc{padding:16px 22px;font-family:"JetBrains Mono",monospace;font-size:12px;
+/* десктоп: tblock — в колонці панелей, одразу під ними */
+.b1-stage>.b1-tblock{grid-column:2;align-self:start;margin-top:10px;}
+.b1-stage>.b1-tblock .b1-tc:first-child{padding-left:20px;}
+.b1-tc{padding:14px 20px;font-family:"JetBrains Mono",monospace;font-size:12px;
   color:var(--b1-slate);border-right:1px solid var(--b1-hair-2);
   letter-spacing:.06em;display:flex;align-items:center;gap:9px;}
 .b1-tc:first-child{padding-left:clamp(46px,6vw,88px);}
 .b1-tc:last-child{border-right:none;}
-.b1-tc.name{color:var(--b1-ink);font-weight:600;}
 .b1-tc.pass{color:var(--b1-gold);font-weight:600;}
 .b1-tc .dot{width:7px;height:7px;border-radius:50%;background:var(--b1-gold);
   box-shadow:0 0 8px -1px var(--b1-gold);animation:ledPass 2.4s ease-in-out infinite;}
@@ -1416,9 +1420,9 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   .stat .n{font-size:clamp(33px,10.5vw,44px);}
   .stat .l{margin-top:8px;}
 
-  /* ---- CASE tabs → 1 стовпець (довгі мітки не переносяться, рядки рівні) ---- */
-  .case-tabs{display:flex;flex-direction:column;gap:6px;margin-top:28px;}
-  .case-tab{justify-content:flex-start;font-size:13.5px;}
+  /* ---- CASE tabs → 2 стовпці ---- */
+  .case-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:28px;}
+  .case-tab{justify-content:flex-start;font-size:12.5px;padding:10px 12px;}
   .case-body{padding:28px 22px;}
   .case-body h3{font-size:25px;}
   .case-body .how{font-size:14.5px;}
