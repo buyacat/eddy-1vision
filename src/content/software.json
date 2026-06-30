@@ -11,7 +11,7 @@
     { "bold": "Інтеграція з обладнанням Eddy Group:", "text": "дані цифрових лабораторій і метеостанції — прямо на панель." }
   ],
   "mock": {
-    "windowTitle": "1-vision · whiteboard",
+    "windowTitle": "Eddy Classroom",
     "video": "sw-demo.mp4"
   },
   "floats": {
