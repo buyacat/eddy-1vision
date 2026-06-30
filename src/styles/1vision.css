@@ -1413,7 +1413,7 @@ h1,h2,h3,h4,p,.b1-h1,.cc .v,.mp h4{overflow-wrap:break-word;}
   /* tblock: 1 рядок під тріо, serial зліва — PASS справа */
   .b1-tblock{order:3;display:flex;flex-direction:row;align-items:center;
     justify-content:space-between;padding:8px 14px;margin-top:4px;
-    border-top:1px solid var(--b1-hair);grid-template-columns:unset;}
+    width:100%;border-top:1px solid var(--b1-hair);grid-template-columns:unset;}
   .b1-tc{padding:6px 0;border-right:none;font-size:11px;}
   .b1-tc:first-child{padding-left:0;}
 
