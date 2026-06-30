@@ -702,7 +702,7 @@ body{font-variant-numeric:tabular-nums lining-nums;}
 .acc,.case-card,.form-card,.cc,.compliance,.made-photo,.mock{border-radius:5px;}
 
 /* ---- spec-plate section headers: "01 / 08" fraction + reticle + datum rule (no diamond) ---- */
-.eyebrow{color:var(--accent);gap:8px;}
+.eyebrow{color:var(--accent-deep);gap:8px;}
 .eyebrow::before{content:"";width:11px;height:11px;background:none;transform:none;border-radius:0;flex:none;
   background-image:linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor);
   background-size:11px 1px,1px 11px;background-position:center;background-repeat:no-repeat;}
@@ -779,8 +779,10 @@ body{font-variant-numeric:tabular-nums lining-nums;}
 /* ---- footer build-plate ---- */
 .footer .f-plate{margin-top:14px;}
 
-/* ---- icon chips: neutral grey holder + blue icon, no ring ---- */
-.acc .ic{background:var(--sky-2);color:var(--accent);border:none;box-shadow:none;}
+/* ---- icon chips: solid gunmetal instrument-key + white icon (legible, deliberate) ---- */
+.acc .ic{border-radius:8px;background:linear-gradient(180deg,var(--accent) 0%,var(--accent-deep) 100%);
+  color:#fff;border:none;
+  box-shadow:0 4px 12px -5px color-mix(in srgb,var(--accent) 65%,transparent),inset 0 1px 0 rgba(255,255,255,.18);}
 
 
 /* ============================================================
